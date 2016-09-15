@@ -39,7 +39,39 @@ app.controller("myCtrl", function($scope, $http) {
             element.classList.remove('displayNone');
             element.classList.add('displayBlock');
         }
-    }
+    };
+    $scope.custom = false;
+    $scope.toggleMenu = function(menu) {
+        if(menu == 'home'){
+            //$scope.first = true;
+            if($scope.custom && $scope.first){
+                $scope.first = true;
+                $scope.custom = false;
+            }else if($scope.custom && $scope.first == false){
+                $scope.custom = true;
+                $scope.first = true;
+            }else if($scope.custom == false){
+                $scope.custom = true;
+                $scope.first = true;
+            }
+            //$scope.custom = $scope.custom === false ? true: false;
+        }else if(menu == 'place'){
+            //$scope.first = false;
+            if($scope.custom && $scope.first){
+                $scope.first = false;
+                $scope.custom = true;
+            }else if($scope.custom && $scope.first == false){
+                $scope.custom = false;
+                $scope.first = false;
+            }else if($scope.custom == false){
+                $scope.custom = true;
+                $scope.first = false;
+            }
+            //$scope.custom = $scope.custom === false ? true: false;
+        }
+
+        console.log($scope.first)
+    };
 
     $scope.restaurants = {
         restaurant1:{

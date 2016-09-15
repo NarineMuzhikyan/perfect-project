@@ -19,17 +19,16 @@
         <li class="nav">
             <img src="images/logo.png">
         </li>
-        <li class="nav capitalize"><a href="#">Home</a></li>
-        <li class="nav capitalize"><a href="#">Place</a></li>
+        <li class="nav capitalize" ng-click="toggleMenu('home')"><a href="#">Home <i class="fa fa-angle-down" aria-hidden="true"></i> </a></li>
+        <li class="nav capitalize" ng-click="toggleMenu('place')"><a href="#">Place <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
         <li class="nav capitalize"><a href="#">Search</a></li>
         <li class="nav capitalize"><a href="#">Log In</a></li>
     </ul>
-    <div class="dropdownMenu">
-        <div class="dropdownInner">
+    <div class="dropdownMenu" ng-show="custom">
+        <div class="dropdownInner" ng-class="first ? 'first' : 'second'">
             <div class="dropdownInnerText">
-                <div class="dropdownText1"></div>
-                <div class="dropdownText2"></div>
-                <div class="dropdownText3"></div>
+                <div class="dropdownTitle"> The place where be the restaurant</div>
+                <div class="dropdownText"></div>
             </div>
         </div>
     </div>
