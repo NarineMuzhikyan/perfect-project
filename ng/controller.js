@@ -132,5 +132,49 @@ app.controller("myCtrl", function($scope, $http) {
         }
 
     }
+    
+    $scope.categories = {
+        f1: {
+            title: 'The place where be the restaurant',
+            text: 'text text text text text text text text text text text text'
+        },
+        f2: {
+            title: 'The place where be the restaurant',
+            text: 'text text text text text text text text text text text text'
+        },
+        f3: {
+            title: 'The place where be the restaurant',
+            text: 'text text text text text text text text text text text text'
+        },
+        f3: {
+            title: 'The place where be the restaurant',
+            text: 'text text text text text text text text text text text text'
+        },
+        f4: {
+            title: 'The place where be the restaurant',
+            text: 'text text text text text text text text text text text text'
+        },
+        f5: {
+            title: 'The place where be the restaurant',
+            text: 'text text text text text text text text text text text text'
+        },
+        f6: {
+            title: 'The place where be the restaurant',
+            text: 'text text text text text text text text text text text text'
+        },
+        f7: {
+            title: 'The place where be the restaurant',
+            text: 'text text text text text text text text text text text text'
+        },
+    };
+
+    $scope.places = {
+        p1: 'Abanda Abbeville Abbotsford Abbott Abbottstown Abbyville Abercrombie Aberdeen Aberdeen Gardens Abernathy Abeytas',
+        p2: 'Abanda Abbeville Abbotsford Abbott Abbottstown Abbyville Abercrombie Aberdeen Aberdeen Gardens Abernathy Abeytas',
+        p3: 'Abanda Abbeville Abbotsford Abbott Abbottstown Abbyville Abercrombie Aberdeen Aberdeen Gardens Abernathy Abeytas',
+        p4: 'Abanda Abbeville Abbotsford Abbott Abbottstown Abbyville Abercrombie Aberdeen Aberdeen Gardens Abernathy Abeytas',
+        p5: 'Abanda Abbeville Abbotsford Abbott Abbottstown Abbyville Abercrombie Aberdeen Aberdeen Gardens Abernathy Abeytas',
+        p6: 'Abanda Abbeville Abbotsford Abbott Abbottstown Abbyville Abercrombie Aberdeen Aberdeen Gardens Abernathy Abeytas'
+    }
 
 });

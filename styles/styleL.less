@@ -66,6 +66,7 @@ html{
           width: 100%;
           height: 400px;
           background-color: white;
+          overflow: auto;
           &.first{
             &:before{
               content:"\A";
@@ -91,11 +92,37 @@ html{
             }
           }
           .dropdownInnerText{
+            max-width: 250px;
+            color: #3d3f45;
+            overflow: hidden;
+            height: 150px;
+            text-overflow: ellipsis;
+            float: left;
+            margin-right: 30px;
             .dropdownTitle{
-
+              font-family: robotobold,Arial;
+              font-size: 20px;
             }
             .dropdownText{
-
+              font-size: 13px;
+              margin-top: 10px;
+              //white-space: nowrap;
+            }
+          }
+          .dropdownInnerText2{
+            max-width: 250px;
+            color: #3d3f45;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            float: left;
+            margin-right: 30px;
+            .dropdownText{
+              font-size: 13px;
+              margin-top: 10px;
+              &:nth-child(10n+10){
+                float: left;
+              }
+              
             }
           }
         }

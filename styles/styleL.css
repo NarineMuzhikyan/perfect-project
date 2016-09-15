@@ -69,6 +69,7 @@ html body .navigation .dropdownMenu .dropdownInner {
   width: 100%;
   height: 400px;
   background-color: white;
+  overflow: auto;
 }
 html body .navigation .dropdownMenu .dropdownInner.first:before {
   content: "\A";
@@ -89,6 +90,38 @@ html body .navigation .dropdownMenu .dropdownInner.second:before {
   left: 280px;
   top: 3px;
   transform: rotate(90deg);
+}
+html body .navigation .dropdownMenu .dropdownInner .dropdownInnerText {
+  max-width: 250px;
+  color: #3d3f45;
+  overflow: hidden;
+  height: 150px;
+  text-overflow: ellipsis;
+  float: left;
+  margin-right: 30px;
+}
+html body .navigation .dropdownMenu .dropdownInner .dropdownInnerText .dropdownTitle {
+  font-family: robotobold,Arial;
+  font-size: 20px;
+}
+html body .navigation .dropdownMenu .dropdownInner .dropdownInnerText .dropdownText {
+  font-size: 13px;
+  margin-top: 10px;
+}
+html body .navigation .dropdownMenu .dropdownInner .dropdownInnerText2 {
+  max-width: 250px;
+  color: #3d3f45;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+  margin-right: 30px;
+}
+html body .navigation .dropdownMenu .dropdownInner .dropdownInnerText2 .dropdownText {
+  font-size: 13px;
+  margin-top: 10px;
+}
+html body .navigation .dropdownMenu .dropdownInner .dropdownInnerText2 .dropdownText:nth-child(10n+10) {
+  float: left;
 }
 html body .maps {
   position: fixed !important;
