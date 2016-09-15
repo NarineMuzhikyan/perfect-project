@@ -1,0 +1,24 @@
+.DS_STORE
+
+node_modules
+bower_components
+
+# Include when developing application packages.
+pubspec.lock
+.c9
+.idea/
+.settings/
+*.swo
+modules/.settings
+.vscode
+modules/.vscode
+
+# Don't check in secret files
+*secret.js
+
+# Ignore npm debug log
+npm-debug.log
+
+# build-analytics
+.build-analytics
+

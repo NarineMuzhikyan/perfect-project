@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <link rel="stylesheet" href="styles/styleL.css" type="text/css" />
+    <link rel="stylesheet" href="styles/slider.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/icons/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/customChackbox.css">
+
+    <script src="lib/angular.min.js"></script>
+    <script src="ng/app.js"></script>
+    <script src="ng/controller.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<div class="navigation">
+    <ul class="clear">
+        <li class="nav">
+            <img src="images/logo.png">
+        </li>
+        <li class="nav capitalize"><a href="#">Home</a></li>
+        <li class="nav capitalize"><a href="#">Place</a></li>
+        <li class="nav capitalize"><a href="#">Search</a></li>
+        <li class="nav capitalize"><a href="#">Log In</a></li>
+    </ul>
+    <div class="dropdownMenu">
+        <div class="dropdownInner">
+            <div class="dropdownInnerText">
+                <div class="dropdownText1"></div>
+                <div class="dropdownText2"></div>
+                <div class="dropdownText3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="sliderSection">
+        <h1 class="headTitle">
+            <span class="titleFirstPart">Choose your favorite</span>
+            <span class="titleSecondPart">- all in same place</span>
+        </h1>
+        <p class="headBody">
+            We have found for you more than 1,000 restaurants in your city. All restaurants with user reviews, ratings and photos.
+        </p>
+        <div class="slider">
+            <!-- Start cssSlider.com -->
+            <div class='csslider1 autoplay '>
+                <input name="cs_anchor1" id='cs_slide1_0' type="radio" class='cs_anchor slide' >
+                <input name="cs_anchor1" id='cs_slide1_1' type="radio" class='cs_anchor slide' >
+                <input name="cs_anchor1" id='cs_slide1_2' type="radio" class='cs_anchor slide' >
+                <input name="cs_anchor1" id='cs_play1' type="radio" class='cs_anchor' checked>
+                <input name="cs_anchor1" id='cs_pause1' type="radio" class='cs_anchor' >
+                <ul>
+                    <div style="width: 100%; visibility: hidden; font-size: 0px; line-height: 0;">
+                        <img src="http://cssslider.com/sliders/pen/images/buns.jpg" style="width: 100%;">
+                    </div>
+                    <li class='num0 img'>
+                        <a href="http://cssslider.com" target=""><img src='images/sliderImages/slider1.jpg' alt='Buns' title='Buns' /> </a>
+                    </li>
+                    <li class='num1 img'>
+                        <a href="http://cssslider.com" target=""><img src='images/sliderImages/slider2.jpg' alt='Croissant' title='Croissant' /> </a>
+                    </li>
+                    <li class='num2 img'>
+                        <a href="http://cssslider.com" target=""><img src='images/sliderImages/slider3.jpg' alt='Lemon pie' title='Lemon pie' /> </a>
+                    </li>
+
+                </ul>
+                <!--<div class='cs_description'>
+                    <label class='num0'>
+                        <span class="cs_title"><span class="cs_wrapper">Buns</span></span>
+                    </label>
+                    <label class='num1'>
+                        <span class="cs_title"><span class="cs_wrapper">Croissant</span></span>
+                    </label>
+                    <label class='num2'>
+                        <span class="cs_title"><span class="cs_wrapper">Lemon pie</span></span>
+                    </label>
+                </div>-->
+
+                <!--<div class='cs_arrowprev'>
+                    <label class='num0' for='cs_slide1_0'></label>
+                    <label class='num1' for='cs_slide1_1'></label>
+                    <label class='num2' for='cs_slide1_2'></label>
+                </div>
+                <div class='cs_arrownext'>
+                    <label class='num0' for='cs_slide1_0'></label>
+                    <label class='num1' for='cs_slide1_1'></label>
+                    <label class='num2' for='cs_slide1_2'></label>
+                </div>
+
+                <div class='cs_bullets'>
+                    <label class='num0' for='cs_slide1_0'>
+                        <span class='cs_point'></span>
+                        <span class='cs_thumb'><img src='http://cssslider.com/sliders/pen/tooltips/buns.jpg' alt='Buns' title='Buns' /></span>
+                    </label>
+                    <label class='num1' for='cs_slide1_1'>
+                        <span class='cs_point'></span>
+                        <span class='cs_thumb'><img src='http://cssslider.com/sliders/pen/tooltips/croissant.jpg' alt='Croissant' title='Croissant' /></span>
+                    </label>
+                    <label class='num2' for='cs_slide1_2'>
+                        <span class='cs_point'></span>
+                        <span class='cs_thumb'><img src='http://cssslider.com/sliders/pen/tooltips/lemonpie.jpg' alt='Lemon pie' title='Lemon pie' /></span>
+                    </label>
+                </div>-->
+            </div>
+            <!-- End cssSlider.com -->
+        </div>
+        <div class="secondNav">
+            <ul class="NavButtons clear ">
+
+                <li class="navSecond capitalize" ng-click="displayElement('f1')">mode
+
+                    <div id="f1" class="filters displayNone">
+                        <span class="triangle"></span>
+                        <p>
+                            <input type="checkbox" id="test1" />
+                            <label for="test1">Day and night</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test2"  />
+                            <label for="test2">Now open</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test3" />
+                            <label for="test3">Will be open yet 2 hours</label>
+                        </p>
+                        <button class=" filterButtons capitalize">cancel</button>
+                        <button class="filterButtons capitalize">ok</button>
+                    </div>
+                </li>
+                <li class="navSecond capitalize" ng-click="displayElement('f2')">cost
+                    <div id="f2" class="filters displayNone">
+                        <span class="triangle"></span>
+                        <p>
+                            <input type="checkbox" id="test12" />
+                            <label for="test12">Up to 1000</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test22"  />
+                            <label for="test22">1000 - 1500</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test32" />
+                            <label for="test32">1500-2000</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test42" />
+                            <label for="test42">more then 2000</label>
+                        </p>
+                        <button class=" filterButtons capitalize">cancel</button>
+                        <button class="filterButtons capitalize">ok</button>
+                    </div>
+                </li>
+                <li class="navSecond capitalize" ng-click="displayElement('f3')">rating
+                    <div id="f3" class="filters displayNone">
+                        <span class="triangle"></span>
+                        <p>
+                            <input type="checkbox" id="test13" />
+                            <label for="test13">Red</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test23"  />
+                            <label for="test23">Yellow</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test33" />
+                            <label for="test33">Green</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test43" />
+                            <label for="test43">Brown</label>
+                        </p>
+                        <button class=" filterButtons capitalize">cancel</button>
+                        <button class="filterButtons capitalize">ok</button>
+                    </div>
+                </li>
+                <li class="navSecond capitalize" ng-click="displayElement('f4')">cuisine
+                    <div id="f4" class="filters displayNone">
+                        <span class="triangle"></span>
+                        <p>
+                            <input type="checkbox" id="test14" />
+                            <label for="test14">Red</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test24"  />
+                            <label for="test24">Yellow</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test34" />
+                            <label for="test34">Green</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test44" />
+                            <label for="test44">Brown</label>
+                        </p>
+                        <button class=" filterButtons capitalize">cancel</button>
+                        <button class="filterButtons capitalize">ok</button>
+                    </div>
+                </li>
+                <li class="navSecond capitalize" ng-click="displayElement('f5')">type of restaurants
+                    <div id="f5" class="filters displayNone">
+                        <span class="triangle"></span>
+                        <p>
+                            <input type="checkbox" id="test15" />
+                            <label for="test15">Red</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test25"  />
+                            <label for="test25">Yellow</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test35" />
+                            <label for="test35">Green</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test45" />
+                            <label for="test45">Brown</label>
+                        </p>
+                        <button class=" filterButtons capitalize">cancel</button>
+                        <button class="filterButtons capitalize">ok</button>
+                    </div>
+                </li>
+                <li class="navSecond capitalize" ng-click="displayElement('f6')">services
+                    <div id="f6" class="filters displayNone">
+                        <span class="triangle"></span>
+                        <p>
+                            <input type="checkbox" id="test16" />
+                            <label for="test16">Red</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test26"  />
+                            <label for="test26">Yellow</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test36" />
+                            <label for="test36">Green</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test46" />
+                            <label for="test46">Brown</label>
+                        </p>
+                        <button class=" filterButtons capitalize">cancel</button>
+                        <button class="filterButtons capitalize">ok</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pageSection">
+        <div class="headSection">
+            <ul>
+                <li class="capitalize">area</li>
+                <li class="capitalize">metro</li>
+                <li class="capitalize">sorting</li>
+            </ul>
+        </div>
+        <div class="info" ng-repeat="info in restaurants">
+            <div class="imageSection">
+                <img src="{{info.image}}">
+            </div>
+            <div class="textSection">
+                <div class="title" ng-bind="info.title"></div>
+                <div class="text" ng-bind="info.service"></div>
+                <div class="rate" ng-if="info.rating ==1">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="rate" ng-if="info.rating ==2">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="rate" ng-if="info.rating ==3">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="rate" ng-if="info.rating ==4">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="rate" ng-if="info.rating ==5">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="explanation" ng-bind="restaurants.restaurant1.explane"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="maps" id="map" style="width:100%;height:100%"></div>
+<script>
+    function myMap() {
+        var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+        var mapCanvas = document.getElementById("map");
+        var mapProp = {center: myCenter, zoom: 5};
+        var map = new google.maps.Map(mapCanvas, mapProp);
+        var marker = new google.maps.Marker({position:myCenter,
+            icon: "images/ball.png"});
+        marker.setMap(map);
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+html {
+  height: 100vh;
+}
+html body {
+  height: 100vh;
+}
+html body a {
+  text-decoration: none;
+  color: #a3a4ae;
+}
+html body .clear {
+  content: '';
+  display: block;
+  clear: both;
+}
+html body .navigation {
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+html body .navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 54, 74, 0.95);
+  color: #a3a4ae;
+}
+html body .navigation li {
+  padding: 12px 30px;
+}
+html body .navigation li.nav {
+  float: left;
+}
+html body .navigation li:first-child {
+  padding: 0;
+}
+html body .navigation li a:hover {
+  color: #d2d3d8;
+  text-decoration: none;
+}
+html body .navigation li a:active,
+html body .navigation li a:focus {
+  color: #d2d3d8;
+  text-decoration: none;
+}
+html body .navigation .dropdownMenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: #3d3f45;
+  top: 45px;
+  background: #34364a;
+  background: rgba(52, 54, 74, 0.95);
+  padding: 20px;
+  border-top: 1px solid #363749;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+html body .maps {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+html body .content {
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 60px;
+}
+html body .content .sliderSection {
+  width: 100%;
+  background-color: #E0E0E0;
+  padding: 30px 40px;
+  text-align: center;
+}
+html body .content .sliderSection .headTitle {
+  font-weight: 400;
+  font-family: robotolight,Arial;
+  font-size: 40px;
+  line-height: 50px;
+  display: inline;
+}
+html body .content .sliderSection .headTitle .titleFirstPart {
+  color: #3d3f55;
+}
+html body .content .sliderSection .headTitle .titleSecondPart {
+  color: #bbbcc4;
+}
+html body .content .sliderSection .headBody {
+  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 20px 0 0;
+  padding: 0;
+  top: 0;
+}
+html body .content .sliderSection .slider {
+  height: 250px;
+  margin-top: 20px;
+}
+html body .content .sliderSection .secondNav {
+  width: 100%;
+  height: 40px;
+}
+html body .content .sliderSection .secondNav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+html body .content .sliderSection .secondNav ul.NavButtons {
+  clear: both;
+}
+html body .content .sliderSection .secondNav ul li {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #9E9E9E;
+}
+html body .content .sliderSection .secondNav ul li:hover {
+  cursor: pointer;
+  background-color: #757575;
+}
+html body .content .sliderSection .secondNav ul li.navSecond {
+  display: inline-block;
+  margin-right: 10px;
+}
+html body .content .sliderSection .secondNav ul li.navSecond .filters {
+  position: absolute;
+  background-color: white;
+  border-radius: 3px;
+  width: 150px;
+  z-index: 3;
+  top: 60px;
+  left: -30px;
+  color: #9e9e9e;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid;
+}
+html body .content .sliderSection .secondNav ul li.navSecond .filters:before {
+  content: "\A";
+  border-style: solid;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #9e9e9e  transparent transparent;
+  position: absolute;
+  left: 60px;
+  top: -15px;
+  transform: rotate(90deg);
+}
+html body .content .sliderSection .secondNav ul li.navSecond .filters .filterButtons {
+  width: 60px;
+  color: white;
+  background-color: #9e9e9e;
+  box-shadow: none;
+  border: none;
+  height: 30px;
+}
+html body .content .sliderSection .secondNav ul li.navSecond .filters .triangle:before {
+  content: "\A";
+  border-style: solid;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #ffffff transparent transparent;
+  position: absolute;
+  left: 60px;
+  top: -14px;
+  transform: rotate(90deg);
+}
+html body .content .sliderSection .secondNav ul li:last-child {
+  margin-right: 0;
+}
+html body .content .sliderSection .secondNav ul li a:hover {
+  color: #d2d3d8;
+  text-decoration: none;
+}
+html body .content .pageSection {
+  background-color: #E0E0E0;
+  width: 650px;
+  margin-top: 20px;
+  padding: 20px;
+}
+html body .content .pageSection .headSection ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+html body .content .pageSection .headSection ul li {
+  padding: 10px 20px;
+  background-color: #9E9E9E;
+  display: inline-block;
+  margin-right: 10px;
+}
+html body .content .pageSection .headSection ul li:hover {
+  cursor: pointer;
+  background-color: #757575;
+}
+html body .content .pageSection .headSection ul li.navSecond {
+  display: inline-block;
+  margin-right: 10px;
+}
+html body .content .pageSection .headSection ul li:last-child {
+  margin-right: 0;
+}
+html body .content .pageSection .headSection ul li a:hover {
+  color: #d2d3d8;
+  text-decoration: none;
+}
+html body .content .pageSection .info {
+  margin-top: 20px;
+}
+html body .content .pageSection .info .imageSection {
+  width: 160px;
+  height: 160px;
+  float: left;
+}
+html body .content .pageSection .info .textSection {
+  float: left;
+  margin-left: 10px;
+}
+html body .content .pageSection .info .textSection .title {
+  font-weight: 400;
+  font-family: robotobold,Arial;
+  font-size: 20px;
+  line-height: 25px;
+  position: relative;
+  margin: 0 0 10px;
+}
+html body .content .pageSection .info .textSection .text {
+  color: #000;
+  max-width: 300px;
+  max-height: 54px;
+}
+html body .content .pageSection .info .textSection .rate {
+  color: #ffc200;
+}
+html body .content .pageSection .info .textSection .explanation {
+  max-height: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+html body .content .pageSection .info:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+html body .displayBlock {
+  display: block;
+}
+html body .displayNone {
+  display: none;
+}
+html body .capitalize {
+  text-transform: capitalize;
+}
+html body .uppercase {
+  text-transform: uppercase;
+}
