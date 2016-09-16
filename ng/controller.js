@@ -168,13 +168,13 @@ app.controller("myCtrl", function($scope, $http) {
         },
     };
 
-    $scope.places = {
-        p1: 'Abanda Abbeville Abbotsford Abbott Abbottstown Abbyville Abercrombie Aberdeen Aberdeen Gardens Abernathy Abeytas',
-        p2: 'Abanda Abbeville Abbotsford Abbott Abbottstown Abbyville Abercrombie Aberdeen Aberdeen Gardens Abernathy Abeytas',
-        p3: 'Abanda Abbeville Abbotsford Abbott Abbottstown Abbyville Abercrombie Aberdeen Aberdeen Gardens Abernathy Abeytas',
-        p4: 'Abanda Abbeville Abbotsford Abbott Abbottstown Abbyville Abercrombie Aberdeen Aberdeen Gardens Abernathy Abeytas',
-        p5: 'Abanda Abbeville Abbotsford Abbott Abbottstown Abbyville Abercrombie Aberdeen Aberdeen Gardens Abernathy Abeytas',
-        p6: 'Abanda Abbeville Abbotsford Abbott Abbottstown Abbyville Abercrombie Aberdeen Aberdeen Gardens Abernathy Abeytas'
-    }
+    $scope.places = [
+        ['Abanda',  'Abbeville', 'Abbotsford', 'Abbott', 'Abbottstown', 'Abbyville', 'Abercrombie', 'Aberdeen', 'Aberdeen', 'Gardens'],
+        ['Abanda',  'Abbeville', 'Abbotsford', 'Abbott', 'Abbottstown', 'Abbyville', 'Abercrombie', 'Aberdeen', 'Aberdeen', 'Gardens'],
+        ['Abanda',  'Abbeville', 'Abbotsford', 'Abbott', 'Abbottstown', 'Abbyville', 'Abercrombie', 'Aberdeen', 'Aberdeen', 'Gardens'],
+        ['Abanda',  'Abbeville', 'Abbotsford', 'Abbott', 'Abbottstown', 'Abbyville', 'Abercrombie', 'Aberdeen', 'Aberdeen', 'Gardens'],
+        ['Abanda',  'Abbeville', 'Abbotsford', 'Abbott', 'Abbottstown', 'Abbyville', 'Abercrombie', 'Aberdeen', 'Aberdeen', 'Gardens'],
+        ['Abanda',  'Abbeville', 'Abbotsford', 'Abbott', 'Abbottstown', 'Abbyville', 'Abercrombie', 'Aberdeen', 'Aberdeen', 'Gardens'],
+    ]
 
 });

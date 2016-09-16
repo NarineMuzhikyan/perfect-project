@@ -6,10 +6,21 @@ html{
       text-decoration: none;
       color: #a3a4ae;
     }
+    button{
+      display: block;
+    }
     .clear{
       content:'';
       display:block;
       clear: both;
+    }
+    .filterButtons{
+      width: 60px;
+      color: white;
+      background-color: #9e9e9e;
+      box-shadow: none;
+      border: none;
+      height: 30px;
     }
     .navigation{
       width: 100%;
@@ -34,7 +45,10 @@ html{
         &.nav{
           float: left;
           i{
-            padding-left: 10px;
+            padding: 0 10px;
+          }
+          &:last-child{
+            float: right;
           }
         }
         &:first-child{
@@ -110,7 +124,6 @@ html{
             }
           }
           .dropdownInnerText2{
-            max-width: 250px;
             color: #3d3f45;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -118,11 +131,26 @@ html{
             margin-right: 30px;
             .dropdownText{
               font-size: 13px;
-              margin-top: 10px;
-              &:nth-child(10n+10){
-                float: left;
+              //margin-top: 10px;
+              float: left;
+              margin-right: 30px;
+              div{
+                margin-top: 10px;
               }
+            }
+          }
+          .topButtons{
+            &:after{
+              content: '';
+              display: table;
+              clear: both;
+            }
 
+            .mergedButtons{
+              width: inherit;
+              background: rgba(52, 54, 74, 0.95);
+              float: left;
+              margin-right: 7px;
             }
           }
         }
@@ -230,6 +258,10 @@ html{
                     box-shadow: none;
                     border: none;
                     height: 30px;
+                    float: left;
+                    &:last-child{
+                      margin-left: 5px;
+                    }
                   }
                   .triangle{
                     &:before{

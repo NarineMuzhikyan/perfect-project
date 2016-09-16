@@ -21,7 +21,7 @@
         </li>
         <li class="nav capitalize" ng-click="toggleMenu('home')"><a href="#">Home <i class="fa fa-angle-down" aria-hidden="true"></i> </a></li>
         <li class="nav capitalize" ng-click="toggleMenu('place')"><a href="#">Place <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-        <li class="nav capitalize"><a href="#">Search</a></li>
+        <li class="nav capitalize"><a href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a></li>
         <li class="nav capitalize"><a href="#">Log In</a></li>
     </ul>
     <div class="dropdownMenu" ng-show="custom">
@@ -30,68 +30,29 @@
                 <div class="dropdownTitle" ng-bind="category.title"></div>
                 <div class="dropdownText" ng-bind="category.text"></div>
             </div>
-            <div class="dropdownInnerText2" ng-if="!first">
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
-                <div class="dropdownText">texssssss</div>
+            <div class="topButtons" ng-if="!first">
+                <button class="filterButtons mergedButtons">Country1</button>
+                <button class="filterButtons mergedButtons">Country1</button>
+                <button class="filterButtons mergedButtons">Country1</button>
+                <button class="filterButtons mergedButtons">Country1</button>
 
+            </div>
+            <div class="dropdownInnerText2" ng-if="!first">
+                <div class="dropdownText" ng-if="places.length>0">
+                    <div  ng-repeat="place in places[0] track by $index" ng-bind="place"></div>
+                </div>
+                <div class="dropdownText" ng-if="places.length>1">
+                    <div ng-repeat="place in places[1] track by $index" ng-bind="place"></div>
+                </div>
+                <div class="dropdownText" ng-if="places.length>2">
+                    <div ng-repeat="place in places[2] track by $index" ng-bind="place"></div>
+                </div>
+                <div class="dropdownText" ng-if="places.length>3">
+                    <div ng-repeat="place in places[3] track by $index" ng-bind="place"></div>
+                </div>
+                <div class="dropdownText" ng-if="places.length>4">
+                    <div ng-repeat="place in places[4] track by $index" ng-bind="place"></div>
+                </div>
             </div>
         </div>
     </div>
