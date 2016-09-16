@@ -1,5 +1,7 @@
 app.controller("myCtrl", function($scope, $http) {
 
+    $scope.search = true;
+    $scope.custom = false;
     $scope.displayElement = function (id) {
         var element1 = document.getElementById('f1');
         var element2 = document.getElementById('f2');
@@ -40,7 +42,6 @@ app.controller("myCtrl", function($scope, $http) {
             element.classList.add('displayBlock');
         }
     };
-    $scope.custom = false;
     $scope.toggleMenu = function(menu) {
         if(menu == 'home'){
             //$scope.first = true;
@@ -72,6 +73,10 @@ app.controller("myCtrl", function($scope, $http) {
 
         console.log($scope.first)
     };
+
+    $scope.showSearch = function(){
+        $scope.search = false
+    }
 
     $scope.restaurants = {
         restaurant1:{

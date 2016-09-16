@@ -11,6 +11,19 @@ html body a {
 html body button {
   display: block;
 }
+html body input {
+  background-color: #3d3f52;
+  border: 1px solid #9e9e9e;
+  height: 45px;
+  padding: 0 20px;
+}
+html body .lightInput {
+  background-color: white;
+  border: 1px solid #9e9e9e;
+  padding: 8px 20px;
+  height: inherit;
+  width: 100%;
+}
 html body .clear {
   content: '';
   display: block;
@@ -23,6 +36,31 @@ html body .filterButtons {
   box-shadow: none;
   border: none;
   height: 30px;
+}
+html body .popupButton {
+  width: 45%;
+}
+html body .popupButton:first-child {
+  float: left;
+}
+html body .popupButton:last-child {
+  float: right;
+}
+html body .popupBody {
+  text-align: center;
+  padding: 15px 40px;
+}
+html body .popupBody input {
+  margin-top: 10px;
+}
+html body .popupBody input:first-child {
+  margin: 0;
+}
+html body .popupHeader {
+  text-align: center;
+}
+html body .popupFooter {
+  padding: 15px 40px;
 }
 html body .navigation {
   width: 100%;
@@ -40,9 +78,10 @@ html body .navigation ul {
   height: 100%;
   background: rgba(52, 54, 74, 0.95);
   color: #a3a4ae;
+  line-height: 45px;
 }
 html body .navigation li {
-  padding: 12px 30px;
+  padding: 0 30px;
 }
 html body .navigation li.nav {
   float: left;
@@ -52,6 +91,16 @@ html body .navigation li.nav i {
 }
 html body .navigation li.nav:last-child {
   float: right;
+}
+html body .navigation li.nav .searchIcon {
+  position: relative;
+}
+html body .navigation li.nav .searchIcon input {
+  padding: 0 35px;
+}
+html body .navigation li.nav .searchIcon i {
+  position: absolute;
+  top: 16px;
 }
 html body .navigation li:first-child {
   padding: 0;

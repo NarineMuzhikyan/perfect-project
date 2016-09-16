@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="lib/icons/font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/customChackbox.css">
 
+    <script src="lib/jquery-3.1.0.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/angular.min.js"></script>
     <script src="ng/app.js"></script>
     <script src="ng/controller.js"></script>
@@ -21,8 +23,15 @@
         </li>
         <li class="nav capitalize" ng-click="toggleMenu('home')"><a href="#">Home <i class="fa fa-angle-down" aria-hidden="true"></i> </a></li>
         <li class="nav capitalize" ng-click="toggleMenu('place')"><a href="#">Place <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-        <li class="nav capitalize"><a href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a></li>
-        <li class="nav capitalize"><a href="#">Log In</a></li>
+        <li class="nav capitalize" ng-click="showSearch()" ng-if="search"><a href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a></li>
+        <li class="nav capitalize" ng-click="" ng-if="!search">
+            <div class="searchIcon">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input class="capitalize" type="text" placeholder="search"/>
+            </div>
+
+        </li>
+        <li class="nav capitalize" data-toggle="modal" data-target="#myModal"><a href="#">Log In</a></li>
     </ul>
     <div class="dropdownMenu" ng-show="custom">
         <div class="dropdownInner" ng-class="first ? 'first' : 'second'">
@@ -317,8 +326,28 @@
     </div>
 </div>
 
-
-
+<!-- popups-->
+<!--logIn popup-->
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header popupHeader">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title capitalize">log in</h4>
+            </div>
+            <div class="modal-body popupBody">
+                <input class="capitalize lightInput" type="text" placeholder="name"/>
+                <input class="capitalize lightInput" type="text" placeholder="E-mail"/>
+                <input class="capitalize lightInput" type="password" placeholder="password"/>
+            </div>
+            <div class="modal-footer popupFooter">
+                <button type="button" class="filterButtons popupButton capitalize" data-dismiss="modal">Close</button>
+                <button type="button" class="filterButtons popupButton capitalize">log in</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
