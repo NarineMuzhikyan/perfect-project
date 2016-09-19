@@ -1,7 +1,9 @@
-app.controller("myCtrl", function($scope, $http) {
+app.controller("myCtrl", function($scope, $http, $document, $window, $timeout) {
 
     $scope.search = true;
     $scope.custom = false;
+    $scope.openDropMenu = false;
+
     $scope.displayElement = function (id) {
         var element1 = document.getElementById('f1');
         var element2 = document.getElementById('f2');
@@ -76,7 +78,28 @@ app.controller("myCtrl", function($scope, $http) {
 
     $scope.showSearch = function(){
         $scope.search = false
-    }
+    };
+
+    $scope.openDrop = function(){
+        $scope.openDropMenu = $scope.openDropMenu === false ? true: false;
+    };
+
+
+    $scope.$watch(function () {
+        return $window.scrollY;
+    }, function (scrollY) {
+        var elem = document.getElementById('secondNav');
+        //console.log(scrollY);
+        if(scrollY >= 460){
+            if(!$( "#secondNav" ).hasClass( "fixedNavigation" )){
+                $( "#secondNav" ).addClass( "fixedNavigation" );
+            }
+            $scope.visibleLittleMenu = true;
+        }else{
+            $( "#secondNav" ).removeClass( "fixedNavigation" );
+            $scope.visibleLittleMenu = false;
+        }
+    });
 
     $scope.restaurants = {
         restaurant1:{
