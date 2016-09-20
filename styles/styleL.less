@@ -80,6 +80,31 @@ html{
               text-transform: capitalize;
 
             }
+            .genderInputs{
+              .genderSection{
+                display: table;
+                float: left;
+                span{
+                  display: table-cell;
+                  color: #7777a1;
+                }
+                input[type=radio]{
+                  width: auto;
+                  //float: left;
+                  display: table-cell;
+                  vertical-align: middle;
+                  margin-left: 5px;
+                }
+                &:first-child{
+                  margin-right: 10px;
+                }
+              }
+            }
+            &:after{
+              content: '';
+              display: table;
+              clear: both;
+            }
           }
           textarea{
             width: 100%;
@@ -115,6 +140,10 @@ html{
         }
 
       }
+    }
+
+    form{
+      width: 100%;
     }
 
     .toTop{
@@ -533,6 +562,40 @@ html{
                 clear: both;
               }
             }
+
+            .additionalInfo{
+              margin-top: 50px;
+              .additionalTitle{
+                font-size: 18px;
+                color: #3d3f52;
+                font-weight: 500;
+              }
+              .imageAndInfo{
+                margin-top: 15px;
+                img{
+                  max-width: 45px;
+                  max-height: 45px;
+                  border-radius: 100%;
+                  float: left;
+                }
+                .info{
+                  float: left;
+                  margin: 0 0 0 10px;
+                  .infoTitle{
+                    color: #3d3f52;
+                    font-weight: 500;
+                  }
+                  .moreInfo{
+
+                  }
+                }
+                &:after{
+                  content: '';
+                  display: table;
+                  clear: both;
+                }
+              }
+            }
           }
           footer{
             height: auto;
@@ -554,6 +617,7 @@ html{
                 margin-right: 20px;
                 .footerText{
                   padding-bottom: 5px;
+                  text-transform: capitalize;
                   &:hover{
                     color: white;
                     cursor: pointer;

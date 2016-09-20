@@ -159,7 +159,25 @@ app.controller("myCtrl", function($scope, $http, $document, $window, $timeout) {
             explane: 'in this bar  you can finde many testy foods and'
         }
 
-    }
+    };
+
+    $scope.additionalInfo = {
+        restaurant1:{
+            image: 'images/restaurantImages/rest1.jpg',
+            title: 'Title1',
+            more: '420 places'
+        },
+        restaurant2:{
+            image: 'images/restaurantImages/rest2.jpg',
+            title: 'Title2',
+            more: '420 places'
+        },
+        restaurant3:{
+            image: 'images/restaurantImages/rest3.jpg',
+            title: 'Title3',
+            more: '420 places'
+        }
+    };
     
     $scope.categories = {
         f1: {
@@ -167,10 +185,6 @@ app.controller("myCtrl", function($scope, $http, $document, $window, $timeout) {
             text: 'text text text text text text text text text text text text'
         },
         f2: {
-            title: 'The place where be the restaurant',
-            text: 'text text text text text text text text text text text text'
-        },
-        f3: {
             title: 'The place where be the restaurant',
             text: 'text text text text text text text text text text text text'
         },
@@ -193,7 +207,7 @@ app.controller("myCtrl", function($scope, $http, $document, $window, $timeout) {
         f7: {
             title: 'The place where be the restaurant',
             text: 'text text text text text text text text text text text text'
-        },
+        }
     };
 
     $scope.places = [
