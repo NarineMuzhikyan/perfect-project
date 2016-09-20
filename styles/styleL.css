@@ -287,10 +287,12 @@ html body .content {
   width: 100%;
   padding: 0 20px;
   margin-top: 60px;
+  position: absolute;
+  z-index: 11;
 }
 html body .content .sliderSection {
   width: 100%;
-  background-color: #E0E0E0;
+  background-color: white;
   padding: 30px 40px;
   text-align: center;
 }
@@ -422,7 +424,7 @@ html body .content .sliderSection .secondNav ul li a:hover {
   text-decoration: none;
 }
 html body .content .pageSection {
-  background-color: #E0E0E0;
+  background-color: white;
   width: 650px;
   margin-top: 20px;
 }
