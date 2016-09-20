@@ -26,20 +26,21 @@
         var infowindow;
 
         function initMap() {
-            var pyrmont = {lat: -33.867, lng: 151.195};
+            var pyrmont = new google.maps.LatLng(-33.8665433,151.1956316);
 
             map = new google.maps.Map(document.getElementById('map'), {
                 center: pyrmont,
                 zoom: 15
             });
 
-            infowindow = new google.maps.InfoWindow();
-            var service = new google.maps.places.PlacesService(map);
-            service.nearbySearch({
+            var request = {
                 location: pyrmont,
-                radius: 500,
-                type: ['store']
-            }, callback);
+                radius: '500',
+                query: 'restaurant'
+            };
+
+            service = new google.maps.places.PlacesService(map);
+            service.textSearch(request, callback);
         }
 
         function callback(results, status) {
@@ -70,10 +71,15 @@
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
 <div class="navigation">
+    <div class="navIco">
+        <img src="images/logo.png">
+    </div>
+    <div class="mobile-menu-icon" ng-click="toggleTopIco()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <ul class="clear">
-        <li class="nav">
-            <img src="images/logo.png">
-        </li>
         <li class="nav capitalize" ng-click="toggleMenu('home')"><a href="#">Home <i class="fa fa-angle-down" aria-hidden="true"></i> </a></li>
         <li class="nav capitalize" ng-click="toggleMenu('place')"><a href="#">Place <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
         <li class="nav capitalize" ng-click="showSearch()" ng-if="search"><a href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a></li>
@@ -85,6 +91,7 @@
 
         </li>
         <li class="nav capitalize" data-toggle="modal" data-target="#myModal"><a href="#">Log In</a></li>
+
     </ul>
     <div class="dropdownMenu" ng-show="custom">
         <div class="dropdownInner" ng-class="first ? 'first' : 'second'">
@@ -119,6 +126,7 @@
             </div>
         </div>
     </div>
+
 </div>
 
 <div class="content">
@@ -396,6 +404,7 @@
                         <div class="explanation" ng-bind="restaurants.restaurant1.explane"></div>
                     </div>
                 </div>
+                <button class="showMoreButton">show more</button>
                 <div class="additionalInfo">
                     <div class="additionalTitle">Restaurants in nearby towns</div>
                     <div class="imageAndInfo" ng-repeat="adInfo in additionalInfo">

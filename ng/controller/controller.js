@@ -101,6 +101,14 @@ app.controller("myCtrl", function($scope, $http, $document, $window, $timeout) {
         }
     });
 
+    $scope.toggleTopIco = function() {
+        if(!$( ".mobile-menu-icon" ).hasClass( "animate" )){
+            $( ".mobile-menu-icon" ).addClass( "animate" );
+        }else{
+            $( ".mobile-menu-icon" ).removeClass( "animate" );
+        }
+    }
+
     $scope.restaurants = {
         restaurant1:{
             image: 'images/restaurantImages/rest1.jpg',
