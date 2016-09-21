@@ -3,6 +3,8 @@ app.controller("myCtrl", function($scope, $http, $document, $window, $timeout) {
     $scope.search = true;
     $scope.custom = false;
     $scope.openDropMenu = false;
+    $scope.animateTopMenuVar = false;
+    $scope.animateSecondMenuVar = false;
 
     $scope.displayElement = function (id) {
         var element1 = document.getElementById('f1');
@@ -80,6 +82,11 @@ app.controller("myCtrl", function($scope, $http, $document, $window, $timeout) {
         $scope.search = false
     };
 
+    if(window.innerWidth <=770)
+    {
+        $scope.search = false
+    };
+
     $scope.openDrop = function(){
         $scope.openDropMenu = $scope.openDropMenu === false ? true: false;
     };
@@ -88,26 +95,21 @@ app.controller("myCtrl", function($scope, $http, $document, $window, $timeout) {
     $scope.$watch(function () {
         return $window.scrollY;
     }, function (scrollY) {
-        var elem = document.getElementById('secondNav');
         //console.log(scrollY);
         if(scrollY >= 460){
-            if(!$( "#secondNav" ).hasClass( "fixedNavigation" )){
-                $( "#secondNav" ).addClass( "fixedNavigation" );
-            }
             $scope.visibleLittleMenu = true;
+
         }else{
-            $( "#secondNav" ).removeClass( "fixedNavigation" );
             $scope.visibleLittleMenu = false;
         }
     });
 
-    $scope.toggleTopIco = function() {
-        if(!$( ".mobile-menu-icon" ).hasClass( "animate" )){
-            $( ".mobile-menu-icon" ).addClass( "animate" );
-        }else{
-            $( ".mobile-menu-icon" ).removeClass( "animate" );
-        }
-    }
+    $scope.toggleTopMenu = function() {
+        $scope.animateTopMenuVar = $scope.animateTopMenuVar === false ? true: false;
+    };
+    $scope.toggleSecondMenu = function(){
+        $scope.animateSecondMenuVar = $scope.animateSecondMenuVar === false ? true: false;
+    };
 
     $scope.restaurants = {
         restaurant1:{
