@@ -111,59 +111,82 @@ app.controller("myCtrl", function($scope, $http, $document, $window, $timeout) {
         $scope.animateSecondMenuVar = $scope.animateSecondMenuVar === false ? true: false;
     };
 
+    $scope.clickPoint = function () {
+
+
+    };
+
+    $scope.$watch('have', function() {
+        alert('hey, myVar has changed!');
+    });
+
     $scope.restaurants = {
-        restaurant1:{
+        1:{
             image: 'images/restaurantImages/rest1.jpg',
             title: 'Title1',
             service: 'banket, restaurant',
             rating: '3',
             explane: 'in this bar  you can finde many testy foods and'
         },
-        restaurant2:{
+        2:{
             image: 'images/restaurantImages/rest2.jpg',
             title: 'Title2',
             service: 'banket, restaurant',
             rating: '5',
             explane: 'in this bar  you can finde many testy foods and'
         },
-        restaurant3:{
+        3:{
             image: 'images/restaurantImages/rest3.jpg',
             title: 'Title3',
             service: 'banket, restaurant',
             rating: '1',
             explane: 'in this bar  you can finde many testy foods and'
         },
-        restaurant4:{
+        4:{
             image: 'images/restaurantImages/rest4.jpg',
             title: 'Title4',
             service: 'banket, restaurant',
             rating: '4',
             explane: 'in this bar  you can finde many testy foods and'
         },
-        restaurant5:{
+        5:{
             image: 'images/restaurantImages/rest5.jpg',
             title: 'Title5',
             service: 'banket, restaurant',
             rating: '5',
             explane: 'in this bar  you can finde many testy foods and'
         },
-        restaurant6:{
+        6:{
             image: 'images/restaurantImages/rest2.jpg',
             title: 'Title6',
             service: 'banket, restaurant',
             rating: '3',
             explane: 'in this bar  you can finde many testy foods and'
         },
-        restaurant7:{
+        7:{
             image: 'images/restaurantImages/rest3.jpg',
             title: 'Title7',
             service: 'banket, restaurant',
             rating: '2',
             explane: 'in this bar  you can finde many testy foods and'
         },
-        restaurant8:{
+        8:{
             image: 'images/restaurantImages/rest1.jpg',
             title: 'Title8',
+            service: 'banket, restaurant',
+            rating: '5',
+            explane: 'in this bar  you can finde many testy foods and'
+        },
+        9:{
+            image: 'images/restaurantImages/rest3.jpg',
+            title: 'Title9',
+            service: 'banket, restaurant',
+            rating: '3',
+            explane: 'in this bar  you can finde many testy foods and'
+        },
+        10:{
+            image: 'images/restaurantImages/rest5.jpg',
+            title: 'Title10',
             service: 'banket, restaurant',
             rating: '5',
             explane: 'in this bar  you can finde many testy foods and'

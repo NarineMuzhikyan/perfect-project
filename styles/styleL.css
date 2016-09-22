@@ -309,7 +309,7 @@ html body .content {
   width: 100%;
   padding: 0 20px;
   margin-top: 60px;
-  position: absolute;
+  position: relative;
   z-index: 11;
 }
 html body .content .sliderSection {
@@ -451,6 +451,7 @@ html body .content .pageSection {
   width: 650px;
   margin-top: 20px;
   box-shadow: 0 0 10px #888888;
+  position: relative;
 }
 html body .content .pageSection .headSection {
   padding: 20px 0 0 20px;
@@ -486,7 +487,7 @@ html body .content .pageSection .headSection ul li a:hover {
   text-decoration: none;
 }
 html body .content .pageSection .headSection .dropdown2 {
-  border: 1px solid #757575;
+  border: 1px solid #3c3e51;
   position: absolute;
   top: 105%;
   width: 100%;
@@ -496,18 +497,23 @@ html body .content .pageSection .headSection .dropdown2 {
   z-index: 5;
 }
 html body .content .pageSection .headSection .dropdown2 .options {
-  color: #757575;
+  color: #3c3e51;
   padding: 5px;
 }
 html body .content .pageSection .headSection .dropdown2 .options:first-child {
   border-bottom: 1px solid;
 }
 html body .content .pageSection .headSection .dropdown2 .options:hover {
-  background-color: #757575;
+  background-color: #3c3e51;
   color: white;
 }
 html body .content .pageSection .headSection .dropdown2 .options i {
   font-size: 10px;
+}
+html body .content .pageSection .cont {
+  position: absolute;
+  width: 100%;
+  background-color: white;
 }
 html body .content .pageSection .cont .infoContent {
   padding: 0 20px;

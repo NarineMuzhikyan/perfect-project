@@ -24,45 +24,52 @@
 
         var map;
         var infowindow;
+        var locations = [
+            ['Restaurant10, we have meny news for you, you will be happy, with us', -33.811542, 151.201856, 10],
+            ['Restaurant9, we have meny news for you, you will be happy, with us', -33.811542, 151.214856, 9],
+            ['Restaurant8, we have meny news for you, you will be happy, with us', -33.811542, 151.274856, 8],
+            ['Restaurant7, we have meny news for you, you will be happy, with us', -33.851542, 151.234856, 7],
+            ['Restaurant6, we have meny news for you, you will be happy, with us', -33.851542, 151.274856, 6],
+            ['Restaurant1, we have meny news for you, you will be happy, with us', -33.890542, 151.274856, 4],
+            ['Restaurant2, we have meny news for you, you will be happy, with us', -33.923036, 151.259052, 5],
+            ['Restaurant3, we have meny news for you, you will be happy, with us', -34.028249, 151.157507, 3],
+            ['Restaurant4, we have meny news for you, you will be happy, with us', -33.80010128657071, 151.28747820854187, 2],
+            ['Restaurant5, we have meny news for you, you will be happy, with us', -33.950198, 151.259302, 1]
+        ];
 
         function initMap() {
             var pyrmont = new google.maps.LatLng(-33.8665433,151.1956316);
 
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: pyrmont,
-                zoom: 15
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: new google.maps.LatLng(-33.92, 151.25),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
             });
 
-            var request = {
-                location: pyrmont,
-                radius: '500',
-                query: 'restaurant'
-            };
+            infowindow = new google.maps.InfoWindow();
 
-            service = new google.maps.places.PlacesService(map);
-            service.textSearch(request, callback);
-        }
+            var marker, i;
 
-        function callback(results, status) {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                for (var i = 0; i < results.length; i++) {
-                    createMarker(results[i]);
-                }
+            for (i = 0; i < locations.length; i++) {
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map
+                });
+
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                    return function() {
+                        infowindow.setContent(locations[i][0]);
+                        infowindow.open(map, marker);
+                        window.haveClickIn = locations[i][4];
+                    }
+                })(marker, i));
             }
+
         }
 
-        function createMarker(place) {
-            var placeLoc = place.geometry.location;
-            var marker = new google.maps.Marker({
-                map: map,
-                position: place.geometry.location
-            });
 
-            google.maps.event.addListener(marker, 'click', function() {
-                infowindow.setContent(place.name);
-                infowindow.open(map, this);
-            });
-        }
+
+
     </script>
 
 
@@ -408,7 +415,7 @@
                         <div class="explanation" ng-bind="restaurants.restaurant1.explane"></div>
                     </div>
                 </div>
-                <button class="showMoreButton">show more</button>
+                <button class="showMoreButton" ng-click="clickPoint()">show more</button>
                 <div class="additionalInfo">
                     <div class="additionalTitle">Restaurants in nearby towns</div>
                     <div class="imageAndInfo" ng-repeat="adInfo in additionalInfo">
