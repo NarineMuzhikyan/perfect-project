@@ -17,66 +17,8 @@
     <script src="ng/controller/controller.js"></script>
     <script src="ng/directive/scroll.js"></script>
 
-    <script>
-        // This example requires the Places library. Include the libraries=places
-        // parameter when you first load the API. For example:
-        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-        var map;
-        var infowindow;
-        var locations = [
-            ['Restaurant10, we have meny news for you, you will be happy, with us', -33.811542, 151.201856, 10],
-            ['Restaurant9, we have meny news for you, you will be happy, with us', -33.811542, 151.214856, 9],
-            ['Restaurant8, we have meny news for you, you will be happy, with us', -33.811542, 151.274856, 8],
-            ['Restaurant7, we have meny news for you, you will be happy, with us', -33.851542, 151.234856, 7],
-            ['Restaurant6, we have meny news for you, you will be happy, with us', -33.851542, 151.274856, 6],
-            ['Restaurant1, we have meny news for you, you will be happy, with us', -33.890542, 151.274856, 4],
-            ['Restaurant2, we have meny news for you, you will be happy, with us', -33.923036, 151.259052, 5],
-            ['Restaurant3, we have meny news for you, you will be happy, with us', -34.028249, 151.157507, 3],
-            ['Restaurant4, we have meny news for you, you will be happy, with us', -33.80010128657071, 151.28747820854187, 2],
-            ['Restaurant5, we have meny news for you, you will be happy, with us', -33.950198, 151.259302, 1]
-        ];
-
-        function initMap() {
-            var pyrmont = new google.maps.LatLng(-33.8665433,151.1956316);
-
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 10,
-                center: new google.maps.LatLng(-33.92, 151.25),
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            });
-
-            infowindow = new google.maps.InfoWindow();
-
-            var marker, i;
-
-            for (i = 0; i < locations.length; i++) {
-                marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                    map: map
-                });
-
-                google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                    return function() {
-                        infowindow.setContent(locations[i][0]);
-                        infowindow.open(map, marker);
-                        window.haveClickIn = locations[i][4];
-                    }
-                })(marker, i));
-            }
-
-        }
-
-
-
-
-    </script>
-
-
-
-
 </head>
-<body ng-app="myApp" ng-controller="myCtrl">
+<body ng-app="myApp" ng-controller="myCtrl" ng-controller="MapCtrl">
 <div class="navigation" ng-class="{'close': !animateTopMenuVar && !search}">
     <div class="navIco">
         <img src="images/logo.png">
@@ -135,7 +77,7 @@
 
 </div>
 
-<div class="content">
+<div class="content" ng-controller="MapCtrl">
     <div class="sliderSection">
         <h1 class="headTitle">
             <span class="titleFirstPart">Choose your favorite</span>
@@ -378,9 +320,9 @@
                 </li>
             </ul>
         </div>
-        <div class="cont">
+        <div class="cont" >
             <div class="infoContent">
-                <div class="info" ng-repeat="info in restaurants">
+                <div class="info" ng-repeat="info in markers" ng-class="{'active': clichedElementId == info.id}" ng-click="openInfoWindow($event, info)">
                     <div class="imageSection">
                         <img src="{{info.image}}">
                     </div>
@@ -412,7 +354,7 @@
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                         </div>
-                        <div class="explanation" ng-bind="restaurants.restaurant1.explane"></div>
+                        <div class="explanation" ng-bind="info.explane"></div>
                     </div>
                 </div>
                 <button class="showMoreButton" ng-click="clickPoint()">show more</button>
@@ -645,26 +587,18 @@
     </div>
 </div>
 <!---->
+<div class="maps" >
+    <div id="map" style="width:100%;height:100%"></div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkB3G-qzliKWCg-x_LYj_BlP5wNRvg2BA&libraries=places" async defer></script>
+<script src="ng/controller/MapController.js" ></script>
 
 
-<div class="maps" id="map" style="width:100%;height:100%"></div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkB3G-qzliKWCg-x_LYj_BlP5wNRvg2BA&libraries=places&callback=initMap" async defer></script>
 
-
-<!--<div class="maps" id="map" style="width:100%;height:100%"></div>
-<script>
-    function myMap() {
-        var myCenter = new google.maps.LatLng(51.508742,-0.120850);
-        var mapCanvas = document.getElementById("map");
-        var mapProp = {center: myCenter, zoom: 5};
-        var map = new google.maps.Map(mapCanvas, mapProp);
-        var marker = new google.maps.Marker({position:myCenter,
-            icon: "images/ball.png"});
-        marker.setMap(map);
-    }
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>-->
 
 </body>
 </html>
+
+
+<!--
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkB3G-qzliKWCg-x_LYj_BlP5wNRvg2BA&libraries=places&callback=initMap" async defer></script>-->

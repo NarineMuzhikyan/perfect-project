@@ -463,6 +463,7 @@ html body .content .pageSection .headSection ul {
   width: 100%;
   height: 100%;
   color: white;
+  padding-bottom: 20px;
 }
 html body .content .pageSection .headSection ul li {
   padding: 10px 20px;
@@ -514,6 +515,8 @@ html body .content .pageSection .cont {
   position: absolute;
   width: 100%;
   background-color: white;
+  box-shadow: 0 0 10px #888888;
+  border-top: 1px solid;
 }
 html body .content .pageSection .cont .infoContent {
   padding: 0 20px;
@@ -529,6 +532,16 @@ html body .content .pageSection .cont .infoContent .info:hover {
   transition: 0.3s;
 }
 html body .content .pageSection .cont .infoContent .info:hover .textSection .text {
+  color: white;
+  transition: 0.3s;
+}
+html body .content .pageSection .cont .infoContent .info.active {
+  background-color: #3c3e51;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+html body .content .pageSection .cont .infoContent .info.active .textSection .text {
   color: white;
   transition: 0.3s;
 }
