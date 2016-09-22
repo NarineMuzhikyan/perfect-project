@@ -360,14 +360,14 @@ html body .content .sliderSection .secondNav.fixedNavigation {
   z-index: 20;
   transition: 0.3s;
   box-shadow: 0 0 10px #888888;
-  color: #877777;
+  color: #3c3e51;
 }
 html body .content .sliderSection .secondNav.fixedNavigation ul li {
   background-color: white;
-  color: #877777;
+  color: #3c3e51;
 }
 html body .content .sliderSection .secondNav.fixedNavigation ul li:hover {
-  background-color: #757575;
+  background-color: #3c3e51;
   color: white;
 }
 html body .content .sliderSection .secondNav ul {
@@ -384,11 +384,11 @@ html body .content .sliderSection .secondNav ul.NavButtons {
 html body .content .sliderSection .secondNav ul li {
   position: relative;
   padding: 10px 20px;
-  background-color: #9E9E9E;
+  background-color: #3c3e51;
 }
 html body .content .sliderSection .secondNav ul li:hover {
   cursor: pointer;
-  background-color: #757575;
+  background-color: #222431;
 }
 html body .content .sliderSection .secondNav ul li.navSecond {
   display: inline-block;
@@ -465,14 +465,14 @@ html body .content .pageSection .headSection ul {
 }
 html body .content .pageSection .headSection ul li {
   padding: 10px 20px;
-  background-color: #9E9E9E;
+  background-color: #3c3e51;
   display: inline-block;
   margin-right: 10px;
   position: relative;
 }
 html body .content .pageSection .headSection ul li:hover {
   cursor: pointer;
-  background-color: #757575;
+  background-color: #222431;
 }
 html body .content .pageSection .headSection ul li.navSecond {
   display: inline-block;
@@ -517,7 +517,7 @@ html body .content .pageSection .cont .infoContent .info {
   transition: 0.3s;
 }
 html body .content .pageSection .cont .infoContent .info:hover {
-  background-color: #9e9e9e;
+  background-color: #3c3e51;
   color: white;
   cursor: pointer;
   transition: 0.3s;
@@ -851,28 +851,13 @@ html body .uppercase {
     transition: 0.1s;
   }
   html body .content .sliderSection .secondNav.fixedNavigation {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    left: 0;
     padding: 10px 0;
     height: auto;
-    background-color: white;
     z-index: 20;
     transition: 0.3s;
-    box-shadow: 0 0 10px #888888;
-    color: #877777;
   }
   html body .content .sliderSection .secondNav.fixedNavigation ul {
     padding: 0 30px;
-  }
-  html body .content .sliderSection .secondNav.fixedNavigation ul li {
-    background-color: white;
-    color: #877777;
-  }
-  html body .content .sliderSection .secondNav.fixedNavigation ul li:hover {
-    background-color: #757575;
-    color: white;
   }
   html body .content .sliderSection .secondNav.closeSecondNav {
     height: 45px;
