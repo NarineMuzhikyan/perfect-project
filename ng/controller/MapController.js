@@ -2,7 +2,7 @@
 //Data
 
 
-app.controller('MapCtrl', function ($scope) {
+app.controller('MapCtrl', function ($scope, $rootScope) {
 
     $scope.restaurants = [
         {
@@ -133,10 +133,29 @@ app.controller('MapCtrl', function ($scope) {
         marker.content = '<div class="infoWindowContent">' + info.explane + '</div>';
 
         google.maps.event.addListener(marker, 'click', function(){
-                infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
-                infoWindow.open($scope.map, marker);
-                $scope.clichedElementId = marker.id;
-                console.log($scope.clichedElementId );
+            infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
+            infoWindow.open($scope.map, marker);
+            $scope.clichedElementId = marker.id;
+
+
+            $scope.safeApply = function(fn) {
+                var phase = this.$root.$$phase;
+                if(phase == '$apply' || phase == '$digest') {
+                    if(fn && (typeof(fn) === 'function')) {
+                        fn();
+                    }
+                } else {
+                    this.$apply(fn);
+                }
+            };
+
+            safeApply({
+
+            });
+
+
+
+            /*$scope.$apply();*/
         });
 
         $scope.markers.push(marker);
@@ -150,11 +169,6 @@ app.controller('MapCtrl', function ($scope) {
         e.preventDefault();
         google.maps.event.trigger(selectedMarker, 'click');
     };
-
-   /* $scope.$watch('clichedElementId', function() {
-        alert('hey, myVar has changed!');
-        console.log(true);
-    });*/
 
 
 });
