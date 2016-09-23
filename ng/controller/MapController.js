@@ -149,9 +149,9 @@ app.controller('MapCtrl', function ($scope, $rootScope) {
                 }
             };
 
-            safeApply({
-
-            });
+            $scope.safeApply(
+                $scope.clichedElementId
+            );
 
 
 
