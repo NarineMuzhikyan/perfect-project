@@ -1,3 +1,4 @@
+
 html{
   height: 100vh;
   body{
@@ -10,13 +11,13 @@ html{
       display: block;
     }
     input{
-      background-color: #3d3f52;
+      background-color: @mainColor;
       border: 1px solid #9e9e9e;
       height: 45px;
       padding: 0 20px;
     }
     .lightInput{
-      background-color: white;
+      background-color: @secondColor;
       border: 1px solid #9e9e9e;
       padding: 8px 20px;
       height: inherit;
@@ -29,7 +30,7 @@ html{
       clear: both;
     }
     .greyButton{
-      color: white;
+      color: @secondColor;
       background-color: #9e9e9e;
       border: none;
       padding: 5px;
@@ -40,22 +41,22 @@ html{
       width: 100%;
       text-transform: capitalize;
       box-shadow: none;
-      border: 1px solid #3d3f52;
-      background-color: white;
-      color: #3d3f52;
+      border: 1px solid @mainColor;
+      background-color: @secondColor;
+      color: @mainColor;
       font-weight: 600;
       font-size: 18px;
       margin-top: 20px;
       transition: 0.3s;
       &:hover{
-        color: white;
-        background-color: #3d3f52;
+        color: @secondColor;
+        background-color: @mainColor;
         transition: 0.3s;
       }
     }
     .filterButtons{
       width: 60px;
-      color: white;
+      color: @secondColor;
       background-color: #9e9e9e;
       box-shadow: none;
       border: none;
@@ -258,7 +259,7 @@ html{
           padding: 20px;
           width: 100%;
           height: 400px;
-          background-color: white;
+          background-color: @secondColor;
           overflow: auto;
           &.first{
             &:before{
@@ -299,7 +300,7 @@ html{
             .dropdownText{
               font-size: 13px;
               margin-top: 10px;
-              //white-space: nowrap;
+              //@secondColor-space: nowrap;
             }
           }
           .dropdownInnerText2{
@@ -353,7 +354,7 @@ html{
       .sliderSection{
         width: 100%;
         //height: 450px;
-        background-color: white;
+        background-color: @secondColor;
         padding: 30px 40px;
         text-align: center;
         box-shadow: 0 0 10px #888888;
@@ -393,7 +394,7 @@ html{
             left: 0;
             padding: 10px 0;
             height: auto;
-            background-color: white;
+            background-color: @secondColor;
             z-index: 20;
             transition: 0.3s;
             box-shadow: 0 0 10px #888888;
@@ -401,11 +402,11 @@ html{
 
             ul{
               li{
-                background-color: white;
+                background-color: @secondColor;
                 color: #3c3e51;
                 &:hover{
                   background-color: #3c3e51;
-                  color: white;
+                  color: @secondColor;
                 }
               }
             }
@@ -416,7 +417,7 @@ html{
             padding: 0;
             width: 100%;
             height: 100%;
-            color: white;
+            color: @secondColor;
             &.NavButtons{
               clear: both;
             }
@@ -433,7 +434,7 @@ html{
                 margin-right: 10px;
                 .filters{
                   position: absolute;
-                  background-color: white;
+                  background-color: @secondColor;
                   border-radius: 3px;
                   width: 150px;
                   z-index: 3;
@@ -460,7 +461,7 @@ html{
                   }
                   .filterButtons{
                     width: 60px;
-                    color: white;
+                    color: @secondColor;
                     background-color: #9e9e9e;
                     box-shadow: none;
                     border: none;
@@ -497,7 +498,7 @@ html{
       }
 
       .pageSection{
-        background-color: white;
+        background-color: @secondColor;
         width: 650px;
         margin-top: 20px;
         box-shadow: 0 0 10px #888888;
@@ -510,7 +511,7 @@ html{
             padding: 0;
             width: 100%;
             height: 100%;
-            color: white;
+            color: @secondColor;
             padding-bottom: 20px;
             li{
               padding:10px 20px;
@@ -542,7 +543,7 @@ html{
             width: 100%;
             left: 0;
             height: auto;
-            background-color: white;
+            background-color: @secondColor;
             z-index: 5;
             .options{
               color: #3c3e51;
@@ -552,7 +553,7 @@ html{
               }
               &:hover{
                 background-color: #3c3e51;;
-                color: white;
+                color: @secondColor;
               }
               i{
                 font-size: 10px;
@@ -563,7 +564,7 @@ html{
         .cont{
           position: absolute;
           width: 100%;
-          background-color: white;
+          background-color: @secondColor;
           box-shadow: 0 0 10px #888888;
           border-top: 1px solid;
           .infoContent{
@@ -573,11 +574,11 @@ html{
               transition: 0.3s;
               &:hover{
                 background-color: #3c3e51;
-                color: white;
+                color: @secondColor;
                 cursor: pointer;
                 .textSection{
                   .text{
-                    color: white;
+                    color: @secondColor;
                     transition: 0.3s;
                   }
                 }
@@ -585,11 +586,11 @@ html{
               }
               &.active{
                 background-color: #3c3e51;
-                color: white;
+                color: @secondColor;
                 cursor: pointer;
                 .textSection{
                   .text{
-                    color: white;
+                    color: @secondColor;
                     transition: 0.3s;
                   }
                 }
@@ -637,7 +638,7 @@ html{
               margin-top: 50px;
               .additionalTitle{
                 font-size: 18px;
-                color: #3d3f52;
+                color: @mainColor;
                 font-weight: 500;
               }
               .imageAndInfo{
@@ -652,14 +653,14 @@ html{
                   float: left;
                   margin: 0 0 0 10px;
                   &:hover{
-                    background-color: white;
+                    background-color: @secondColor;
                     .moreInfo{
-                      color: #3d3f52;
+                      color: @mainColor;
                       transition: 0s;
                     }
                   }
                   .infoTitle{
-                    color: #3d3f52;
+                    color: @mainColor;
                     font-weight: 500;
 
                   }
@@ -678,7 +679,7 @@ html{
           footer{
             height: auto;
             width: 100%;
-            background-color: #3d3f52;
+            background-color: @mainColor;
             position: relative;
             margin-top: 20px;
             color: #d2d1d1;
@@ -697,7 +698,7 @@ html{
                   padding-bottom: 5px;
                   text-transform: capitalize;
                   &:hover{
-                    color: white;
+                    color: @secondColor;
                     cursor: pointer;
                   }
                 }
@@ -725,21 +726,21 @@ html{
                 &.fb{
                   background-color: #3b5998;
                   &:hover{
-                    background-color: white;
+                    background-color: @secondColor;
                     color: #3b5998;
                   }
                 }
                 &.google{
                   background-color: #db4437;
                   &:hover{
-                    background-color: white;
+                    background-color: @secondColor;
                     color: #db4437;
                   }
                 }
                 &.twit{
                   background-color: #00aced;
                   &:hover{
-                    background-color: white;
+                    background-color: @secondColor;
                     color: #00aced;
                   }
                 }
@@ -816,7 +817,7 @@ html{
             display: block;
             width: 100%;
             height: 3px;
-            background: white;
+            background: @secondColor;
             position: absolute;
 
             &:nth-of-type(1) {
@@ -927,9 +928,9 @@ html{
           left: 0;
           right: 0;
           z-index: 1;
-          color: #3d3f45;
+          color: @mainColor;
           top: 82px;
-          background: #34364a;
+          background: @mainColor;
           background: rgba(52,54,74,.95);
           padding: 20px;
           border-top: 1px solid #363749;
@@ -941,7 +942,7 @@ html{
             padding: 20px;
             width: 100%;
             height: 400px;
-            background-color: white;
+            background-color: @secondColor;
             overflow: auto;
             &.first{
               &:before{
@@ -1004,7 +1005,7 @@ html{
                 display: block;
                 width: 100%;
                 height: 3px;
-                background: #3d3f52;
+                background: @mainColor;
                 position: absolute;
 
                 &:nth-of-type(1) {
@@ -1066,7 +1067,7 @@ html{
 
               width: 100%;
               height: 100%;
-              color: white;
+              color: @secondColor;
               margin-top: 35px;
               &.NavButtons{
                 clear: both;
@@ -1081,7 +1082,7 @@ html{
                   margin-right: 0;
                   .filters{
                     position: absolute;
-                    background-color: white;
+                    background-color: @secondColor;
                     border-radius: 3px;
                     width: 150px;
                     z-index: 3;
@@ -1108,7 +1109,7 @@ html{
                     }
                     .filterButtons{
                       width: 60px;
-                      color: white;
+                      color: @secondColor;
                       background-color: #9e9e9e;
                       box-shadow: none;
                       border: none;
