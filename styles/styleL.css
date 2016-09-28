@@ -561,7 +561,7 @@ html body .content .pageSection .cont .infoContent .info .imageSection {
 }
 html body .content .pageSection .cont .infoContent .info .textSection {
   float: left;
-  margin-left: 10px;
+  margin: 10px 0 0 10px;
 }
 html body .content .pageSection .cont .infoContent .info .textSection .title {
   font-weight: 400;
