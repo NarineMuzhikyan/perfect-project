@@ -201,6 +201,15 @@ html body .navigation .nav .searchIcon {
 }
 html body .navigation .nav .searchIcon input {
   padding: 0 35px;
+  border: none;
+}
+html body .navigation .nav .searchIcon input:active {
+  border: 1px solid #9e9e9e;
+  outline: 0;
+}
+html body .navigation .nav .searchIcon input:focus {
+  border: 1px solid #9e9e9e;
+  outline: 0;
 }
 html body .navigation .nav .searchIcon i {
   position: absolute;
@@ -602,9 +611,19 @@ html body .content .pageSection .cont .infoContent .additionalInfo .imageAndInfo
   float: left;
   margin: 0 0 0 10px;
 }
+html body .content .pageSection .cont .infoContent .additionalInfo .imageAndInfo .info:hover {
+  background-color: white;
+}
+html body .content .pageSection .cont .infoContent .additionalInfo .imageAndInfo .info:hover .moreInfo {
+  color: #3d3f52;
+  transition: 0s;
+}
 html body .content .pageSection .cont .infoContent .additionalInfo .imageAndInfo .info .infoTitle {
   color: #3d3f52;
   font-weight: 500;
+}
+html body .content .pageSection .cont .infoContent .additionalInfo .imageAndInfo .info .moreInfo {
+  transition: 0.5s;
 }
 html body .content .pageSection .cont .infoContent .additionalInfo .imageAndInfo:after {
   content: '';

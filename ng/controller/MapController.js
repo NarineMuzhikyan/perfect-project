@@ -4,6 +4,10 @@
 
 app.controller('MapCtrl', function ($scope, $rootScope) {
 
+    $scope.addMorePoints = function(){
+
+    };
+
     $scope.restaurants = [
         {
             id:1,
@@ -137,6 +141,17 @@ app.controller('MapCtrl', function ($scope, $rootScope) {
             infoWindow.open($scope.map, marker);
             $scope.clichedElementId = marker.id;
 
+            
+
+            $scope.$watch('clichedElementId', function() {
+                var element = document.getElementsByClassName('active');
+                for (var i = 0; i < element.length; i++) {
+                    var el = element[i];
+                    var pos = el.offsetTop
+                };
+                window.scrollTo(0, pos);
+
+            });
 
             $scope.safeApply = function(fn) {
                 var phase = this.$root.$$phase;
@@ -151,6 +166,7 @@ app.controller('MapCtrl', function ($scope, $rootScope) {
 
             $scope.safeApply(
                 $scope.clichedElementId
+
             );
 
 
@@ -169,6 +185,5 @@ app.controller('MapCtrl', function ($scope, $rootScope) {
         e.preventDefault();
         google.maps.event.trigger(selectedMarker, 'click');
     };
-
 
 });

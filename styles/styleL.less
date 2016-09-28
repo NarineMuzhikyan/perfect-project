@@ -216,6 +216,15 @@ html{
           position: relative;
           input{
             padding: 0 35px;
+            border: none;
+            &:active{
+              border: 1px solid #9e9e9e;
+              outline: 0;
+            }
+            &:focus{
+              border: 1px solid #9e9e9e;
+              outline: 0;
+            }
           }
           i{
             position: absolute;
@@ -642,12 +651,20 @@ html{
                 .info{
                   float: left;
                   margin: 0 0 0 10px;
+                  &:hover{
+                    background-color: white;
+                    .moreInfo{
+                      color: #3d3f52;
+                      transition: 0s;
+                    }
+                  }
                   .infoTitle{
                     color: #3d3f52;
                     font-weight: 500;
+
                   }
                   .moreInfo{
-
+                    transition: 0.5s;
                   }
                 }
                 &:after{

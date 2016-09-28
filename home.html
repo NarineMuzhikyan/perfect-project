@@ -31,8 +31,8 @@
     <div class="menuLeft">
         <div class="nav capitalize" ng-click="toggleMenu('home')"><a href="#">Home <i class="fa fa-angle-down" aria-hidden="true"></i> </a></div>
         <div class="nav capitalize" ng-click="toggleMenu('place')"><a href="#">Place <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
-        <div class="nav capitalize" ng-click="showSearch()" ng-if="search"><a href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a></div>
-        <div class="nav capitalize" ng-click="" ng-if="!search">
+        <!--<div class="nav capitalize" ng-click="showSearch()" ng-if="search"><a href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a></div>-->
+        <div class="nav capitalize" ng-click="">
             <div class="searchIcon">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input class="capitalize" type="text" placeholder="search"/>
@@ -357,7 +357,7 @@
                         <div class="explanation" ng-bind="info.explane"></div>
                     </div>
                 </div>
-                <button class="showMoreButton" ng-click="clickPoint()">show more</button>
+                <button class="showMoreButton" ng-click="addMorePoints()" id="active">show more</button>
                 <div class="additionalInfo">
                     <div class="additionalTitle">Restaurants in nearby towns</div>
                     <div class="imageAndInfo" ng-repeat="adInfo in additionalInfo">
