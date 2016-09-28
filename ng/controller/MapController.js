@@ -127,6 +127,7 @@ app.controller('MapCtrl', function ($scope, $rootScope) {
         var marker = new google.maps.Marker({
             map: $scope.map,
             position: new google.maps.LatLng(info.lat, info.long),
+            icon: 'images/ball.png',
             title: info.title,
             id: info.id,
             image: info.image,
@@ -141,7 +142,7 @@ app.controller('MapCtrl', function ($scope, $rootScope) {
             infoWindow.open($scope.map, marker);
             $scope.clichedElementId = marker.id;
 
-            
+
 
             $scope.$watch('clichedElementId', function() {
                 var element = document.getElementsByClassName('active');
