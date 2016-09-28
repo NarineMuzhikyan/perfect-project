@@ -168,6 +168,12 @@ html body .navigation {
   z-index: 20;
   background: rgba(52, 54, 74, 0.95);
   color: #a3a4ae;
+  font-size: 14px;
+}
+html body .navigation:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 html body .navigation .mobile-menu-icon {
   display: none;
@@ -184,6 +190,11 @@ html body .navigation .menuLeft .nav {
   padding: 0;
   float: left;
   padding-right: 35px;
+}
+html body .navigation .menuLeft:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 html body .navigation .nav {
   float: right;
@@ -845,9 +856,9 @@ html body .uppercase {
     left: 0;
     right: 0;
     z-index: 1;
-    color: #3d3f45;
+    color: #3d3f52;
     top: 82px;
-    background: #34364a;
+    background: #3d3f52;
     background: rgba(52, 54, 74, 0.95);
     padding: 20px;
     border-top: 1px solid #363749;
