@@ -16,6 +16,7 @@ html{
       border: 1px solid #9e9e9e;
       height: 45px;
       padding: 0 20px;
+      outline: none;
     }
     .lightInput{
       background-color: @secondColor;
@@ -29,6 +30,16 @@ html{
       content:'';
       display:block;
       clear: both;
+    }
+    .elementLeft{
+      float: left;
+    }
+    .elementRight{
+      float: right;
+    }
+    .mobileNumberPart{
+      line-height: 45px;
+      color: white;
     }
     .greyButton{
       color: @secondColor;
@@ -346,6 +357,20 @@ html{
           }
         }
 
+      }
+    }
+    .restNav{
+      position: absolute;
+      top: 45px;
+      left: 0;
+      z-index: 11;
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      background: rgba(52, 54, 74, 0.7);
+      &.fixedNav{
+        position: fixed;
+        top: 0;
       }
     }
     .maps{

@@ -1,0 +1,72 @@
+.navbar-default .navbar-nav > .active > a {
+  color: white !important;
+  background: rgba(52, 54, 74, 0.95) !important;
+}
+.navbar-default .navbar-nav a {
+  color: white !important;
+}
+.restPageContainer {
+  width: 100%;
+  height: 150px;
+  position: relative;
+}
+.restPageContainer .pageContainer {
+  margin: 30px;
+  position: absolute;
+  top: -100px;
+  background-color: white;
+}
+.restPageContainer .pageContainer .containerTop {
+  padding: 30px;
+}
+.restPageContainer .pageContainer .containerTop:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.restPageContainer .pageContainer .containerTop .titlePart {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.restPageContainer .pageContainer .containerTop .positioningCall {
+  position: relative;
+  width: 200px;
+  float: left;
+}
+.restPageContainer .pageContainer .containerTop .positioningCall .numberInputPart {
+  background-color: white;
+  padding: 7px;
+  text-align: center;
+  color: #3d3f52;
+  border: 1px solid;
+  cursor: pointer;
+}
+.restPageContainer .pageContainer .containerTop .positioningCall .numberInputPart:hover {
+  background-color: #3d3f52;
+  color: white;
+}
+.restPageContainer .pageContainer .containerTop .positioningCall .dropMenu {
+  margin-top: 2px;
+}
+.restPageContainer .pageContainer .containerTop .positioningCall .dropMenu input {
+  width: 100%;
+  background-color: white;
+  color: #3d3f52;
+  border: 1px solid #3d3f52;
+  outline: 0;
+}
+.restPageContainer .pageContainer .containerTop .textToday {
+  float: left;
+  margin-left: 20px;
+  line-height: 35px;
+  font-size: 14px;
+}
+.restPageContainer .pageContainer .containerTop .hours {
+  float: left;
+  height: 36px;
+  margin-left: 20px;
+  outline: none;
+}
+.restPageContainer .pageContainer .containerContent {
+  padding: 30px;
+}

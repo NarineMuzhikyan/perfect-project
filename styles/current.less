@@ -1,0 +1,84 @@
+@mainColor:#3d3f52;
+@secondColor:white;
+
+.navbar-default {
+  .navbar-nav {
+    > .active {
+      > a {
+        color: white !important;
+        background: rgba(52, 54, 74, 0.95) !important;
+      }
+    }
+    a{
+      color: white !important;
+    }
+  }
+}
+.restPageContainer{
+  width: 100%;
+  height: 150px;
+  position: relative;
+  .pageContainer{
+    margin: 30px;
+    position: absolute;
+    top: -100px;
+    background-color: white;
+    .containerTop{
+      padding: 30px;
+      &:after{
+        content: '';
+        display: table;
+        clear: both;
+      }
+      .titlePart{
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      .positioningCall{
+        position: relative;
+        width: 200px;
+        float: left;
+        .numberInputPart{
+          background-color: white;
+          padding: 7px;
+          text-align: center;
+          color: @mainColor;
+          border: 1px solid;
+          cursor: pointer;
+          &:hover{
+            background-color: @mainColor;
+            color: white;
+
+          }
+        }
+        .dropMenu{
+          margin-top: 2px;
+          input{
+            width: 100%;
+            background-color: white;
+            color: @mainColor;
+            border: 1px solid @mainColor;
+            outline: 0;
+          }
+        }
+      }
+
+      .textToday{
+        float: left;
+        margin-left: 20px;
+        line-height: 35px;
+        font-size: 14px;
+      }
+      .hours{
+        float: left;
+        height: 36px;
+        margin-left: 20px;
+        outline: none;
+      }
+
+    }
+    .containerContent{
+      padding: 30px;
+    }
+  }
+}

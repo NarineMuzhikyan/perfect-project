@@ -16,6 +16,7 @@ html body input {
   border: 1px solid #9e9e9e;
   height: 45px;
   padding: 0 20px;
+  outline: none;
 }
 html body .lightInput {
   background-color: white;
@@ -28,6 +29,16 @@ html body .clear {
   content: '';
   display: block;
   clear: both;
+}
+html body .elementLeft {
+  float: left;
+}
+html body .elementRight {
+  float: right;
+}
+html body .mobileNumberPart {
+  line-height: 45px;
+  color: white;
 }
 html body .greyButton {
   color: white;
@@ -317,6 +328,20 @@ html body .navigation .dropdownMenu .dropdownInner .topButtons .mergedButtons {
   background: rgba(52, 54, 74, 0.95);
   float: left;
   margin-right: 7px;
+}
+html body .restNav {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  background: rgba(52, 54, 74, 0.7);
+}
+html body .restNav.fixedNav {
+  position: fixed;
+  top: 0;
 }
 html body .maps {
   position: fixed !important;
