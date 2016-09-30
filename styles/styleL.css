@@ -1,8 +1,14 @@
+.clearElement:after {
+  content: '';
+  display: table;
+  clear: both;
+}
 html {
   height: 100vh;
 }
 html body {
   height: 100vh;
+  background-color: #efefef;
 }
 html body a {
   text-decoration: none;

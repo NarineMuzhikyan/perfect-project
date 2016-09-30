@@ -195,7 +195,7 @@ app.controller('MapCtrl', function ($scope, $http, $document, $window, $timeout)
         google.maps.event.trigger(selectedMarker, 'click');
     };
 
-    //end proceses for map
+    //end processes for map
 
     // open top dropdown menu section
     $scope.openDrop = function(){

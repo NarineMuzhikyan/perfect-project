@@ -21,10 +21,11 @@
   .pageContainer{
     margin: 30px;
     position: absolute;
-    top: -100px;
-    background-color: white;
+    top: -177px;
     .containerTop{
       padding: 30px;
+      border-bottom: 1px solid #efefef;
+      background-color: white;
       &:after{
         content: '';
         display: table;
@@ -75,10 +76,102 @@
         margin-left: 20px;
         outline: none;
       }
+      .rating{
+        float: left;
+        line-height: 35px;
+        margin-left: 20px;
+        .lead{
+          margin: 0;
+          line-height: 35px;
+        }
+      }
 
     }
     .containerContent{
-      padding: 30px;
+      .containerPart{
+        padding: 30px;
+        &:first-child{
+          width: 35%;
+        }
+        &:last-child{
+          width: 65%;
+          padding-left: 0;
+          padding-right: 0;
+          border-left: 1px solid #efefef;
+        }
+        .moreInfo{
+          margin-top: 20px;
+          .introTitle{
+            font-weight: 700;
+          }
+        }
+
+        .mapPartTitle{
+          padding:0 0 20px 20px;
+          border-bottom: 1px solid #efefef;
+        }
+        .mapPartMap{
+          padding: 20px 20px 0 20px;
+          .map{
+            border: 1px solid #efefef;
+          }
+        }
+        .mapPartContent{
+          padding: 20px;
+          .moreInfoAddress{
+            margin-bottom: 15px;
+            .introTitle{
+              font-weight: 700;
+              margin-right: 20px;
+            }
+            .introContent{
+            }
+          }
+        }
+      }
+      .container1{
+        background-color: white;
+      }
+      .pages{
+        background-color: white;
+        margin-top: 10px;
+        padding: 20px;
+        &:after{
+          content: '';
+          display: table;
+          clear: both;
+        }
+        .containerTitle{
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+        .containerContent{
+          display: table;
+          float: left;
+          margin-right: 15px;
+          &:last-child{
+            margin-right: 0;
+          }
+          .shareItem{
+            width: 250px;
+            height: 100px;
+            text-align: center;
+            border: 1px dashed #797979;
+            display: table-cell;
+            vertical-align: middle;
+          }
+        }
+        .container2{
+
+        }
+        .container3{
+
+        }
+        .container4{
+
+        }
+      }
     }
   }
 }

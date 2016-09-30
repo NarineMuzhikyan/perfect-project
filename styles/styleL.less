@@ -1,9 +1,17 @@
 @mainColor:#3d3f52;
 @secondColor:white;
+.clearElement{
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
 html{
   height: 100vh;
   body{
     height: 100vh;
+    background-color: #efefef;
     a{
       text-decoration: none;
       color: #a3a4ae;

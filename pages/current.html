@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../lib/icons/font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../styles/customChackbox.css">
+    <link rel="stylesheet" type="text/css" href="../lib/star/star.css">
 
     <script src="../lib/jquery-3.1.0.min.js"></script>
     <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
@@ -19,6 +20,7 @@
     <script src="../ng/controller/RootCtrl.js"></script>
     <script src="../ng/controller/currentCtrl.js"></script>
     <script src="../ng/directive/scroll.js"></script>
+    <script src="../lib/star/star.js"></script>
 
 </head>
 <body ng-app="myApp" ng-controller="rootController">
@@ -144,7 +146,7 @@
                         <input type="text" placeholder="write phone number">
                     </div>
                 </div>
-                <div class="textToday">Today</div>
+                <div class="textToday">Today at</div>
                 <select class="hours">
                     <option value="t12">12:00</option>
                     <option value="t13">13:00</option>
@@ -160,14 +162,95 @@
                     <option value="t15">23:00</option>
                     <option value="t16">24:00</option>
                 </select>
-
-
+                <div class='rating'>
+                    <div class="lead">
+                        <div id="hearts-existing" class="starrr" data-rating='{{currentRestaurant.rating}}'></div>
+                    </div>
+                </div>
+                <div class="rating">
+                    <span  ng-bind="currentRestaurant.comment"></span>
+                    <span>comments</span>
+                </div>
             </div>
             <div class="containerContent">
-
+                <div class="clearElement container1">
+                    <div class="containerPart elementLeft">
+                        <div class="intro" ng-bind="currentRestaurant.intro"></div>
+                        <div class="moreInfo">
+                            <div class="introTitle capitalize">cuisine</div>
+                            <div class="introContent">European, Italian</div>
+                        </div>
+                        <div class="moreInfo">
+                            <div class="introTitle capitalize">Type of place</div>
+                            <div class="introContent">bars, banquet hall, terrace, rooftop restaurant, karaoke bar</div>
+                        </div>
+                        <div class="moreInfo">
+                            <div class="introTitle capitalize">services</div>
+                            <div class="introContent">Wi-Fi, a business lunch, parking, hookah, karaoke, board games</div>
+                        </div>
+                    </div>
+                    <div class="containerPart elementLeft">
+                        <div class="mapPartTitle" ng-bind="currentRestaurant.mobileNumber"></div>
+                        <div class="mapPartMap" >
+                            <div class="map" id="map" style="width:100%;height:250px"></div>
+                        </div>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkB3G-qzliKWCg-x_LYj_BlP5wNRvg2BA&libraries=places" async defer></script>
+                        <div class="mapPartContent">
+                            <div class="moreInfoAddress clearElement">
+                                <div class="introTitle capitalize elementLeft">address:</div>
+                                <div class="introContent elementLeft" ng-bind="currentRestaurant.address"></div>
+                            </div>
+                            <div class="moreInfoAddress clearElement">
+                                <div class="introTitle capitalize elementLeft">Site:</div>
+                                <div class="introContent elementLeft" ng-bind="currentRestaurant.site"></div>
+                            </div>
+                            <div class="moreInfoAddress clearElement">
+                                <div class="introTitle capitalize elementLeft">Price:</div>
+                                <div class="introContent elementLeft" ng-bind="currentRestaurant.price"></div>
+                            </div>
+                            <div class="moreInfoAddress clearElement">
+                                <div class="introTitle capitalize elementLeft">Working hours:</div>
+                                <div class="introContent elementLeft" ng-bind="currentRestaurant.workingHours"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container2 pages">
+                    <div class="containerTitle capitalize">shares</div>
+                    <div class="containerContent">
+                        <div class="shareItem">something -20%</div>
+                    </div>
+                    <div class="containerContent">
+                        <div class="shareItem">something -20%</div>
+                    </div>
+                    <div class="containerContent">
+                        <div class="shareItem">something -20%</div>
+                    </div>
+                    <div class="containerContent">
+                        <div class="shareItem">something -20%</div>
+                    </div>
+                </div>
+                <div class="container3 pages">
+                    <div class="containerTitle capitalize">menu</div>
+                    <div class="containerContent"></div>
+                </div>
+                <div class="container4 pages">
+                    <div class="containerTitle capitalize">specialists</div>
+                    <div class="containerContent"></div>
+                </div>
+                <div class="container5 pages">
+                    <div class="containerTitle capitalize">reviews</div>
+                    <div class="containerContent"></div>
+                </div>
+                <div class="container5 pages">
+                    <div class="containerTitle capitalize">visitor photos</div>
+                    <div class="containerContent"></div>
+                </div>
             </div>
         </div>
     </div>
+
+
 </div>
 
 
