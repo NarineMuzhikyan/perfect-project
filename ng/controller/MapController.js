@@ -150,8 +150,7 @@ app.controller('MapCtrl', function ($scope, $http, $document, $window, $timeout)
             infoWindow.open($scope.map, marker);
             $scope.clichedElementId = marker.id;
 
-
-
+            
             $scope.$watch('clichedElementId', function() {
                 var element = document.getElementsByClassName('active');
                 for (var i = 0; i < element.length; i++) {
@@ -159,6 +158,7 @@ app.controller('MapCtrl', function ($scope, $http, $document, $window, $timeout)
                     var pos = el.offsetTop
                 };
                 window.scrollTo(0, pos);
+
 
             });
 

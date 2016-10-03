@@ -1,6 +1,7 @@
 app.controller("currentController", function($scope, $http, $document, $window, $timeout) {
 
     $scope.openPhoneInput = false;
+    $scope.CurrentMenu = '';
     
     $scope.$watch(function () {
         return $window.scrollY;
@@ -58,6 +59,30 @@ app.controller("currentController", function($scope, $http, $document, $window, 
                 location: 'England, United Kingdom, London 51.51 latitude and -0.13 longitude',
                 workingHours: 'Working hours: 12:00- 24:00'
             }
+        ],
+        menuItems: ['all', 'main menu', 'collection steam fruit cocktails', 'tea', 'bar menu', 'banquet menu'],
+        specialists: [
+            {
+                photo: '../images/spec/p1.jpg',
+                name: 'Paul Now',
+                star: '5',
+                prof: 'Cook',
+                moreInfo: 'Comments and additional information'
+            },
+            {
+                photo: '../images/spec/p2.jpg',
+                name: 'Lorem Now',
+                star: '3',
+                prof: 'Cook',
+                moreInfo: 'Comments and additional information'
+            },
+            {
+                photo: '../images/spec/p3.jpg',
+                name: 'Paul Lorem',
+                star: '4',
+                prof: 'Cook',
+                moreInfo: 'Comments and additional information'
+            }
         ]
         
     };
@@ -67,7 +92,54 @@ app.controller("currentController", function($scope, $http, $document, $window, 
     };
     $scope.getSharesData = function (data) {
         $scope.SharesPopupData = data;
-    }
+    };
+    $scope.chooseCurrentMenu = function (data) {
+        //there will be call backend
+        $scope.CurrentMenu = [
+            {
+                title:'Lorem ipsum dolor',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
+                'Aliquid debitis deserunt eaque eligendi exercitationem facilis maiores ' +
+                'officia possimus quibusdam tempore?',
+                price: '220$ / 200g'
+            },
+            {
+                title:'Lorem ipsum dolor',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
+                'Aliquid debitis deserunt eaque eligendi exercitationem facilis maiores ' +
+                'officia possimus quibusdam tempore?',
+                price: '120$ / 100g'
+            },
+            {
+                title:'Lorem ipsum dolor',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
+                'Aliquid debitis deserunt eaque eligendi exercitationem facilis maiores ' +
+                'officia possimus quibusdam tempore?',
+                price: '430$'
+            },
+            {
+                title:'Lorem ipsum dolor',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
+                'Aliquid debitis deserunt eaque eligendi exercitationem facilis maiores ' +
+                'officia possimus quibusdam tempore?',
+                price: '130$'
+            },
+            {
+                title:'Lorem ipsum dolor',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
+                'Aliquid debitis deserunt eaque eligendi exercitationem facilis maiores ' +
+                'officia possimus quibusdam tempore?',
+                price: '5530$'
+            },
+            {
+                title:'Lorem ipsum dolor',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
+                'Aliquid debitis deserunt eaque eligendi exercitationem facilis maiores ' +
+                'officia possimus quibusdam tempore?',
+                price: '23$'
+            }
+        ]
+    };
 
 
     //map section

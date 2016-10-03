@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <div class="nav capitalize menuRight" data-toggle="modal" data-target="#myModal"><a href="#">Log In</a></div>
+        <div class="nav capitalize menuRight" data-toggle="modal" data-target="#myModalLogin"><a href="#">Log In</a></div>
 
         <div class="dropdownMenu" ng-show="custom" ng-class="{'secondPart': !first}">
             <div class="dropdownInner" ng-class="first ? 'first' : 'second'">
@@ -227,11 +227,68 @@
                 </div>
                 <div class="container3 pages">
                     <div class="containerTitle capitalize">menu</div>
-                    <div class="containerContent"></div>
+                    <div class="clearElement">
+                        <div class="containerContent elementLeft" ng-repeat="item in currentRestaurant.menuItems">
+                            <button class="chooseRestMenu capitalize" ng-bind="item" ng-click="chooseCurrentMenu(item)"></button>
+                        </div>
+                    </div>
+                    <div class="fillRestMenu clearElement" ng-if="CurrentMenu && currentRestaurant.menuItems">
+                        <div class="testyFood elementLeft" ng-repeat="menu in CurrentMenu">
+                            <div class="foodTitle" ng-bind="menu.title"></div>
+                            <div class="foodDescription" ng-bind="menu.description"></div>
+                            <div class="foodPrice" ng-bind="menu.price"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="container4 pages">
                     <div class="containerTitle capitalize">specialists</div>
-                    <div class="containerContent"></div>
+                    <div class="containerContent clearElement">
+                        <div class="elementLeft specAllInfo" ng-repeat="spec in currentRestaurant.specialists">
+                            <img class="elementLeft" src="{{spec.photo}}">
+                            <div class="elementLeft SpecInfo">
+                                <div class="specialistName" ng-bind="spec.name"></div>
+                                <div class="specialistStar">
+                                    <div class="rate" ng-if="spec.star == 1">
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starGrey" aria-hidden="true"></i>
+                                        <i class="fa fa-star starGrey" aria-hidden="true"></i>
+                                        <i class="fa fa-star starGrey" aria-hidden="true"></i>
+                                        <i class="fa fa-star starGrey" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="rate" ng-if="spec.star == 2">
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starGrey" aria-hidden="true"></i>
+                                        <i class="fa fa-star starGrey" aria-hidden="true"></i>
+                                        <i class="fa fa-star starGrey" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="rate" ng-if="spec.star == 3">
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starGrey" aria-hidden="true"></i>
+                                        <i class="fa fa-star starGrey" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="rate" ng-if="spec.star == 4">
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starGrey" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="rate" ng-if="spec.star == 5">
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                        <i class="fa fa-star starColor" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="specialistProf" ng-bind="spec.prof"></div>
+                                <div class="specialistInfo" ng-bind="spec.moreInfo"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="container5 pages">
                     <div class="containerTitle capitalize">reviews</div>
@@ -248,7 +305,7 @@
 
 
 
-    <!--choose metro station popup-->
+    <!--show shares popup-->
     <div class="modal fade" id="myModalPop" role="dialog">
         <div class="modal-dialog">
 
@@ -274,6 +331,27 @@
     </div>
     <!---->
 
+    <!--logIn popup-->
+    <div class="modal fade" id="myModalLogin" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header popupHeader">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title capitalize">log in</h4>
+                </div>
+                <div class="modal-body popupBody">
+                    <input class="capitalize lightInput" type="text" placeholder="name"/>
+                    <input class="capitalize lightInput" type="text" placeholder="E-mail"/>
+                    <input class="capitalize lightInput" type="password" placeholder="password"/>
+                </div>
+                <div class="modal-footer popupFooter">
+                    <button type="button" class="filterButtons popupButton capitalize" data-dismiss="modal">Close</button>
+                    <button type="button" class="filterButtons popupButton capitalize">log in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
 
 
 </div>

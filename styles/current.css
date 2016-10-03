@@ -1,3 +1,9 @@
+.starColor {
+  color: #ffc200;
+}
+.starGrey {
+  color: #d9dadf;
+}
 .margin15 {
   margin-top: 15px;
 }
@@ -135,6 +141,82 @@
 }
 .restPageContainer .pageContainer .containerContent .container1 {
   background-color: white;
+}
+.restPageContainer .pageContainer .containerContent .container3 .fillRestMenu {
+  width: 100%;
+  height: auto;
+  background-color: #efefef;
+  margin-top: 10px;
+  border: 1px solid #efefef;
+  padding: 20px;
+}
+.restPageContainer .pageContainer .containerContent .container3 .fillRestMenu .testyFood {
+  width: 250px;
+  height: 250px;
+  overflow: auto;
+  border: 1px solid #797979;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+.restPageContainer .pageContainer .containerContent .container3 .fillRestMenu .testyFood .foodTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #3d3f52;
+}
+.restPageContainer .pageContainer .containerContent .container3 .fillRestMenu .testyFood .foodDescription {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.restPageContainer .pageContainer .containerContent .container3 .fillRestMenu .testyFood .foodPrice {
+  color: #383547;
+  font-weight: 800;
+  font-size: 18px;
+}
+.restPageContainer .pageContainer .containerContent .container3 .chooseRestMenu {
+  border: 1px solid #797979;
+  min-width: 80px;
+  text-align: center;
+  font-size: 14px;
+  height: 32px;
+  background-color: white;
+  transition: 0.3s;
+  outline: none;
+}
+.restPageContainer .pageContainer .containerContent .container3 .chooseRestMenu:hover {
+  background-color: #3d3f52;
+  color: white;
+  border: 1px solid #3d3f52;
+  transition: 0.3s;
+}
+.restPageContainer .pageContainer .containerContent .container3 .chooseRestMenu:focus {
+  outline: none;
+}
+.restPageContainer .pageContainer .containerContent .container4 .specAllInfo {
+  margin: 0 15px 15px 0;
+}
+.restPageContainer .pageContainer .containerContent .container4 .specAllInfo img {
+  width: 200px;
+  height: auto;
+}
+.restPageContainer .pageContainer .containerContent .container4 .specAllInfo .SpecInfo {
+  margin-left: 10px;
+}
+.restPageContainer .pageContainer .containerContent .container4 .specAllInfo .SpecInfo div {
+  margin-bottom: 5px;
+}
+.restPageContainer .pageContainer .containerContent .container4 .specAllInfo .SpecInfo .specialistName {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #3d3f52;
+}
+.restPageContainer .pageContainer .containerContent .container4 .specAllInfo .SpecInfo .specialistProf {
+  font-size: 14px;
+  font-weight: 600;
+  color: #3d3f52;
 }
 .restPageContainer .pageContainer .containerContent .pages {
   background-color: white;
