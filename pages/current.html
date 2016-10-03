@@ -217,18 +217,13 @@
                 </div>
                 <div class="container2 pages">
                     <div class="containerTitle capitalize">shares</div>
-                    <div class="containerContent">
-                        <div class="shareItem">something -20%</div>
+                    <div class="containerContent" ng-repeat="shareItem in currentRestaurant.shareItems">
+                        <div class="shareItem" ng-bind="shareItem.title" data-toggle="modal" data-target="#myModalPop" ng-click="getSharesData(shareItem)"></div>
                     </div>
-                    <div class="containerContent">
-                        <div class="shareItem">something -20%</div>
+                    <div class="shareItem" ng-if="!currentRestaurant.shareItems || currentRestaurant.shareItems.length<1">
+                        No Items found
                     </div>
-                    <div class="containerContent">
-                        <div class="shareItem">something -20%</div>
-                    </div>
-                    <div class="containerContent">
-                        <div class="shareItem">something -20%</div>
-                    </div>
+
                 </div>
                 <div class="container3 pages">
                     <div class="containerTitle capitalize">menu</div>
@@ -249,6 +244,36 @@
             </div>
         </div>
     </div>
+
+
+
+
+    <!--choose metro station popup-->
+    <div class="modal fade" id="myModalPop" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header popupHeader">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title capitalize" ng-bind="SharesPopupData.title"></h4>
+                </div>
+                <div class="modal-body popupBody leftContent sharesPopup">
+                    <p ng-bind="SharesPopupData.content"></p>
+                    <img src="{{SharesPopupData.photo}}">
+                    <div class="clearElement margin15 font16">
+                        <i class="fa fa-map-marker elementLeft" aria-hidden="true"></i>{{SharesPopupData.location}}
+                    </div>
+                    <div class="clearElement margin15 font16">
+                        <i class="fa fa-clock-o elementLeft" aria-hidden="true"></i>{{SharesPopupData.workingHours}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!---->
+
 
 
 </div>

@@ -29,11 +29,44 @@ app.controller("currentController", function($scope, $http, $document, $window, 
         site: 'http://www.Loremipsum.com',
         price: '100$-4000$',
         workingHours: '12:00- 24:00',
+        shareItems: [
+            {
+                title: '20% of the whole menu',
+                content: 'Every day, in the period from 12-00 to 17-00 when ordering dishes on the main menu, you get a 20% discount automatically',
+                photo: '../images/restaurantSlider/sliderImg1.jpg',
+                location: 'England, United Kingdom, London 51.51 latitude and -0.13 longitude',
+                workingHours: 'Working hours: 12:00- 24:00'
+            },
+            {
+                title: 'Birthdays our favorite guest',
+                content: 'Every day, in the period from 12-00 to 17-00 when ordering dishes on the main menu, you get a 20% discount automatically',
+                photo: '../images/restaurantSlider/sliderImg2.jpg',
+                location: 'England, United Kingdom, London 51.51 latitude and -0.13 longitude',
+                workingHours: 'Working hours: 12:00- 24:00'
+            },
+            {
+                title: 'something -30%',
+                content: 'Every day, in the period from 12-00 to 17-00 when ordering dishes on the main menu, you get a 20% discount automatically',
+                photo: '../images/restaurantSlider/sliderImg3.jpg',
+                location: 'England, United Kingdom, London 51.51 latitude and -0.13 longitude',
+                workingHours: 'Working hours: 12:00- 24:00'
+            },
+            {
+                title: 'something -80%',
+                content: 'Every day, in the period from 12-00 to 17-00 when ordering dishes on the main menu, you get a 20% discount automatically',
+                photo: '../images/restaurantSlider/sliderImg1.jpg',
+                location: 'England, United Kingdom, London 51.51 latitude and -0.13 longitude',
+                workingHours: 'Working hours: 12:00- 24:00'
+            }
+        ]
         
     };
 
     $scope.togglePhoneNumber = function(){
         $scope.openPhoneInput = $scope.openPhoneInput === false ? true: false;
+    };
+    $scope.getSharesData = function (data) {
+        $scope.SharesPopupData = data;
     }
 
 
@@ -88,6 +121,9 @@ app.controller("currentController", function($scope, $http, $document, $window, 
     };
     for (i = 0; i < $scope.restaurants.length; i++){
         createMarker($scope.restaurants[i]);
-    }
+    };
+
+
+
 });
 

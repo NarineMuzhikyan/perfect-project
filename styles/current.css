@@ -1,3 +1,21 @@
+.margin15 {
+  margin-top: 15px;
+}
+.font16 {
+  font-size: 16px;
+}
+.sharesPopup p::first-letter {
+  font-size: 200%;
+  color: #3d3f52;
+}
+.sharesPopup img {
+  width: 100%;
+  height: auto;
+}
+.sharesPopup i {
+  font-size: 20px;
+  margin-right: 10px;
+}
 .navbar-default .navbar-nav > .active > a {
   color: white !important;
   background: rgba(52, 54, 74, 0.95) !important;
@@ -136,7 +154,7 @@
 .restPageContainer .pageContainer .containerContent .pages .containerContent {
   display: table;
   float: left;
-  margin-right: 15px;
+  margin: 10px 15px 0 0;
 }
 .restPageContainer .pageContainer .containerContent .pages .containerContent:last-child {
   margin-right: 0;
@@ -145,7 +163,8 @@
   width: 250px;
   height: 100px;
   text-align: center;
-  border: 1px dashed #797979;
+  border: 2px dashed #797979;
   display: table-cell;
   vertical-align: middle;
+  cursor: pointer;
 }
