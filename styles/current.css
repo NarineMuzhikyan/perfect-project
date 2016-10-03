@@ -1,3 +1,14 @@
+.ban {
+  width: 100%;
+  height: 148px;
+  position: absolute;
+  background: rebeccapurple;
+  top: -148px;
+  visibility: hidden;
+}
+button:focus {
+  outline: none;
+}
 .starColor {
   color: #ffc200;
 }
@@ -9,6 +20,15 @@
 }
 .font16 {
   font-size: 16px;
+}
+.writeComment {
+  background-color: #3d3f52;
+  color: white;
+  font-size: 16px;
+  border: 1px solid #3d3f52;
+  font-weight: 400;
+  padding: 5px;
+  min-width: 80px;
 }
 .sharesPopup p::first-letter {
   font-size: 200%;
@@ -100,6 +120,9 @@
 .restPageContainer .pageContainer .containerTop .rating .lead {
   margin: 0;
   line-height: 35px;
+}
+.restPageContainer .pageContainer .containerContent {
+  position: relative;
 }
 .restPageContainer .pageContainer .containerContent .containerPart {
   padding: 30px;

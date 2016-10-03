@@ -21,6 +21,7 @@
     <script src="../ng/controller/currentCtrl.js"></script>
     <script src="../ng/directive/scroll.js"></script>
     <script src="../lib/star/star.js"></script>
+    <script src="../js/animateMenu.js"></script>
 
 </head>
 <body ng-app="myApp" ng-controller="rootController">
@@ -89,11 +90,11 @@
         <div class="container-fluid">
             <ul class="nav navbar-nav">
                 <li ng-class="{'active': activePage=='page1'}" ng-click="activePage='page1'"><a href="#">Description</a></li>
-                <li ng-class="{'active': activePage=='page2'}" ng-click="activePage='page2'"><a href="#">Reviews</a></li>
+                <li ng-class="{'active': activePage=='page5'}" ng-click="activePage='page5'"><a href="#">Shares</a></li>
                 <li ng-class="{'active': activePage=='page3'}" ng-click="activePage='page3'"><a href="#">Menu</a></li>
                 <li ng-class="{'active': activePage=='page4'}" ng-click="activePage='page4'"><a href="#">Specialists</a></li>
-                <li ng-class="{'active': activePage=='page5'}" ng-click="activePage='page5'"><a href="#">Shares</a></li>
-                <li ng-class="{'active': activePage=='page6'}" ng-click="activePage='page6'"><a href="#">3D-tour</a></li>
+                <li ng-class="{'active': activePage=='page2'}" ng-click="activePage='page2'"><a href="#">Reviews</a></li>
+                <!--<li ng-class="{'active': activePage=='page6'}" ng-click="activePage='page6'"><a href="#3dTour">3D-tour</a></li>-->
             </ul>
             <div class="elementRight mobileNumberPart" ng-bind="currentRestaurant.mobileNumber">+454 5454 5454 5454 54</div>
         </div>
@@ -137,7 +138,7 @@
 
     <div class="restPageContainer">
         <div class="pageContainer">
-            <div class="containerTop">
+            <div class="containerTop" id="description">
                 <div class="titlePart" ng-bind="currentRestaurant.name"></div>
 
                 <div class="positioningCall">
@@ -172,8 +173,10 @@
                     <span>comments</span>
                 </div>
             </div>
+
             <div class="containerContent">
-                <div class="clearElement container1">
+                <div class="ban parallax"></div>
+                <div class="container1 clearElement">
                     <div class="containerPart elementLeft">
                         <div class="intro" ng-bind="currentRestaurant.intro"></div>
                         <div class="moreInfo">
@@ -215,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container2 pages">
+                <div class="container2 pages parallax" >
                     <div class="containerTitle capitalize">shares</div>
                     <div class="containerContent" ng-repeat="shareItem in currentRestaurant.shareItems">
                         <div class="shareItem" ng-bind="shareItem.title" data-toggle="modal" data-target="#myModalPop" ng-click="getSharesData(shareItem)"></div>
@@ -223,9 +226,8 @@
                     <div class="shareItem" ng-if="!currentRestaurant.shareItems || currentRestaurant.shareItems.length<1">
                         No Items found
                     </div>
-
                 </div>
-                <div class="container3 pages">
+                <div class="container3 pages parallax" >
                     <div class="containerTitle capitalize">menu</div>
                     <div class="clearElement">
                         <div class="containerContent elementLeft" ng-repeat="item in currentRestaurant.menuItems">
@@ -240,7 +242,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container4 pages">
+                <div class="container4 pages parallax" id="specialist">
                     <div class="containerTitle capitalize">specialists</div>
                     <div class="containerContent clearElement">
                         <div class="elementLeft specAllInfo" ng-repeat="spec in currentRestaurant.specialists">
@@ -290,11 +292,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="container5 pages">
-                    <div class="containerTitle capitalize">reviews</div>
+                <div class="container5 pages parallax" id="review">
+                    <div class="containerTitle capitalize clearElement">
+                        <div class="revText elementLeft">reviews</div>
+                        <button class="writeComment elementRight">Write</button>
+                    </div>
                     <div class="containerContent"></div>
                 </div>
-                <div class="container5 pages">
+                <div class="container6 pages parallax">
                     <div class="containerTitle capitalize">visitor photos</div>
                     <div class="containerContent"></div>
                 </div>
