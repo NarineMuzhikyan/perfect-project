@@ -21,6 +21,12 @@ button:focus {
 .font16 {
   font-size: 16px;
 }
+.with100 {
+  width: 100%;
+}
+.marginR10 {
+  margin-right: 10px;
+}
 .writeComment {
   background-color: #3d3f52;
   color: white;
@@ -29,6 +35,17 @@ button:focus {
   font-weight: 400;
   padding: 5px;
   min-width: 80px;
+}
+.doubleButtons button:first-child {
+  margin-right: 10px;
+  background-color: white;
+  color: #3d3f52;
+  transition: all 0.3s;
+}
+.doubleButtons button:first-child:hover {
+  background-color: #3d3f52;
+  color: white;
+  transition: all 0.3s;
 }
 .sharesPopup p::first-letter {
   font-size: 200%;
@@ -240,6 +257,35 @@ button:focus {
   font-size: 14px;
   font-weight: 600;
   color: #3d3f52;
+}
+.restPageContainer .pageContainer .containerContent .container5 .writeContent {
+  height: 160px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.restPageContainer .pageContainer .containerContent .container5 .writeContent.hideWriteContent {
+  height: 0;
+  transition: 0.3s;
+}
+.restPageContainer .pageContainer .containerContent .container5 .writeContent textarea {
+  min-width: 400px;
+  height: 100px;
+  resize: none;
+  padding: 10px;
+}
+.restPageContainer .pageContainer .containerContent .container5 .writeContent textarea:focus {
+  outline: none;
+}
+.restPageContainer .pageContainer .containerContent .container5 .commentContent {
+  border-top: 1px solid #efefef;
+  padding: 25px 0;
+}
+.restPageContainer .pageContainer .containerContent .container5 .commentContent .commentTopPart {
+  margin-bottom: 5px;
+}
+.restPageContainer .pageContainer .containerContent .container5 .commentContent .commentTopPart .name {
+  font-size: 16px;
+  font-weight: 700;
 }
 .restPageContainer .pageContainer .containerContent .pages {
   background-color: white;

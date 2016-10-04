@@ -27,14 +27,35 @@ button{
 .font16{
   font-size: 16px;
 }
+.with100{
+  width: 100%;
+}
+.marginR10{
+  margin-right: 10px;
+}
 .writeComment{
-  background-color: #3d3f52;
+  background-color: @mainColor;
   color: white;
   font-size: 16px;
-  border: 1px solid #3d3f52;
+  border: 1px solid @mainColor;
   font-weight: 400;
   padding: 5px;
   min-width: 80px;
+}
+.doubleButtons{
+  button{
+    &:first-child{
+      margin-right: 10px;
+      background-color: white;
+      color: @mainColor;
+      transition: all 0.3s;
+      &:hover{
+        background-color: @mainColor;
+        color: white;
+        transition: all 0.3s;
+      }
+    }
+  }
 }
 .sharesPopup{
   p{
@@ -265,6 +286,42 @@ button{
               color: #3d3f52;
             }
             .specialistInfo{}
+          }
+        }
+      }
+      .container5{
+        .writeContent{
+          height: 160px;
+          overflow: hidden;
+          transition: 0.3s;
+          &.hideWriteContent{
+            height: 0;
+            transition: 0.3s;
+          }
+          textarea{
+            min-width: 400px;
+            height: 100px;
+            resize: none;
+            padding: 10px;
+            &:focus{
+              outline: none;
+            }
+          }
+          button{
+
+          }
+        }
+        .commentContent{
+          border-top: 1px solid #efefef;
+          padding: 25px 0;
+          .commentTopPart{
+            margin-bottom: 5px;
+            .name{
+              font-size: 16px;
+              font-weight: 700;
+            }
+            .rate{}
+            .comment{}
           }
         }
       }

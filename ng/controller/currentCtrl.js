@@ -2,6 +2,7 @@ app.controller("currentController", function($scope, $http, $document, $window, 
 
     $scope.openPhoneInput = false;
     $scope.CurrentMenu = '';
+    $scope.writeComment = true;
     
     $scope.$watch(function () {
         return $window.scrollY;
@@ -83,6 +84,38 @@ app.controller("currentController", function($scope, $http, $document, $window, 
                 prof: 'Cook',
                 moreInfo: 'Comments and additional information'
             }
+        ],
+        comments: [
+            {
+                name: 'lorem',
+                rate: '5',
+                comment: 'Ad aliquid amet consectetur cumque deleniti in maiores nesciunt praesentium rerum voluptas.',
+                date: '12/02/2013'
+            },
+            {
+                name: 'Ipsum',
+                rate: '4',
+                comment: 'Lorem ipsum dolor sit amet.',
+                date: '3/10/2015'
+            },
+            {
+                name: 'Dolor',
+                rate: '3',
+                comment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet consectetur cumque deleniti in maiores nesciunt praesentium rerum voluptas.',
+                date: '12/02/2016'
+            },
+            {
+                name: 'lorem',
+                rate: '1',
+                comment: 'Lorem ipsum dolor sit amet, in maiores nesciunt praesentium rerum voluptas.',
+                date: '20/12/2014'
+            },
+            {
+                name: 'Amet',
+                rate: '5',
+                comment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet consectetur cumque deleniti in maiores nesciunt praesentium rerum voluptas.',
+                date: '22/05/2016'
+            }
         ]
         
     };
@@ -92,6 +125,12 @@ app.controller("currentController", function($scope, $http, $document, $window, 
     };
     $scope.getSharesData = function (data) {
         $scope.SharesPopupData = data;
+    };
+    $scope.hideWrite = function () {
+        $scope.writeComment = $scope.writeComment === false ? true: false;
+    };
+    $scope.ClearInner = function (data) {
+        $scope.comment = '';
     };
     $scope.chooseCurrentMenu = function (data) {
         //there will be call backend
