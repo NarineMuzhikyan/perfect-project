@@ -36,6 +36,9 @@ button:focus {
   padding: 5px;
   min-width: 80px;
 }
+.doubleButtons button {
+  font-size: 14px;
+}
 .doubleButtons button:first-child {
   margin-right: 10px;
   background-color: white;
@@ -286,6 +289,15 @@ button:focus {
 .restPageContainer .pageContainer .containerContent .container5 .commentContent .commentTopPart .name {
   font-size: 16px;
   font-weight: 700;
+}
+.restPageContainer .pageContainer .containerContent .container5 .bottomPart {
+  border-top: 1px solid #efefef;
+  padding: 10px 0 0 0;
+}
+.restPageContainer .pageContainer .containerContent .container5 .bottomPart button {
+  font-size: 14px;
+  padding: 5px;
+  width: 200px;
 }
 .restPageContainer .pageContainer .containerContent .pages {
   background-color: white;
