@@ -299,6 +299,10 @@ button:focus {
   padding: 5px;
   width: 200px;
 }
+.restPageContainer .pageContainer .containerContent .container6 img {
+  width: 200px;
+  height: 200px;
+}
 .restPageContainer .pageContainer .containerContent .pages {
   background-color: white;
   margin-top: 10px;

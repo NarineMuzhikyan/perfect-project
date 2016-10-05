@@ -116,6 +116,40 @@ app.controller("currentController", function($scope, $http, $document, $window, 
                 comment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet consectetur cumque deleniti in maiores nesciunt praesentium rerum voluptas.',
                 date: '22/05/2016'
             }
+        ],
+        images: [
+            [
+                '../images/restaurantImages/rest1.jpg',
+                '../images/restaurantImages/rest2.jpg',
+                '../images/restaurantImages/rest3.jpg',
+                '../images/restaurantImages/rest4.jpg',
+                '../images/restaurantImages/rest5.jpg',
+                '../images/restaurantImages/rest1.jpg'
+            ],
+            [
+                '../images/restaurantImages/rest2.jpg',
+                '../images/restaurantImages/rest3.jpg',
+                '../images/restaurantImages/rest4.jpg',
+                '../images/restaurantImages/rest5.jpg',
+                '../images/restaurantImages/rest1.jpg',
+                '../images/restaurantImages/rest2.jpg'
+            ],
+            [
+                '../images/restaurantImages/rest3.jpg',
+                '../images/restaurantImages/rest4.jpg',
+                '../images/restaurantImages/rest5.jpg',
+                '../images/restaurantImages/rest1.jpg',
+                '../images/restaurantImages/rest2.jpg',
+                '../images/restaurantImages/rest3.jpg'
+            ],
+            [
+                '../images/restaurantImages/rest4.jpg',
+                '../images/restaurantImages/rest5.jpg',
+                '../images/restaurantImages/rest5.jpg',
+                '../images/restaurantImages/rest1.jpg',
+                '../images/restaurantImages/rest2.jpg',
+                '../images/restaurantImages/rest3.jpg'
+            ]
         ]
         
     };
@@ -131,6 +165,17 @@ app.controller("currentController", function($scope, $http, $document, $window, 
     };
     $scope.ClearInner = function (data) {
         $scope.comment = '';
+    };
+    $scope.currentIndex = 0;
+    $scope.slickConfig = {
+        event: {
+            afterChange: function (event, slick, currentSlide, nextSlide) {
+                $scope.currentIndex = currentSlide; // save current index each time
+            },
+            init: function (event, slick) {
+                slick.slickGoTo($scope.currentIndex); // slide to correct index when init
+            }
+        }
     };
     $scope.chooseCurrentMenu = function (data) {
         //there will be call backend
@@ -178,6 +223,7 @@ app.controller("currentController", function($scope, $http, $document, $window, 
                 price: '23$'
             }
         ]
+
     };
 
 
